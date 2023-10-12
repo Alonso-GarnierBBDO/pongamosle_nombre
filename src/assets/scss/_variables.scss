@@ -1,0 +1,62 @@
+
+@font-face {
+    font-family: gotham_bold;
+    src: url(../fonts/Gotham-Bold.otf);
+}
+
+@font-face {
+    font-family: gotham_medium;
+    src: url(../fonts/Gotham-Medium.otf);
+}
+
+
+// Mixins
+
+// Animation
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+@mixin animate($name, $duration, $type, $loop){
+    animation: $name $duration $type $loop;
+}
+
+// Convert px to rem
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit(16px)}rem;
+}
+
+// Media query
+@mixin bp($point) {
+    @if $point == escritorio {
+        @media (min-width: 1600px) { @content; }
+    }
+    @else if $point == laptop {
+        @media (min-width: 1100px) { @content; }
+    }
+    @else if $point == tablet {
+        @media (min-width: 700px)  { @content; }
+    }
+}
+
+// Colors
+$principal_01: #FFCFC2;
+$principal_02: #EA5C5C;
+$principal_03: #ffffff;
+$secundario_01: #D93F3F;
+$secundario_02: #FFB8B8;
+$secundario_03: #FF7B7B;
+
+// Fonts variables
+
+$font_principal: gotham_medium;
+$font_secundario: gotham_bold;
+

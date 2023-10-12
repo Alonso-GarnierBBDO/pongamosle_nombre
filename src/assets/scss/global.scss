@@ -1,5 +1,14 @@
-
-
 // Components
-
 @import './variables';
+@import './components/header';
+
+body,
+*,
+main{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    background-color: $principal_01;
+}
