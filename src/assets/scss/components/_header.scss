@@ -171,6 +171,9 @@ header{
             img{
                 height: 80px;
                 transform: translate(0px, calc(50px - 35px));
+                position: absolute;
+                left: 50px;
+                top: 7px;
             }
         }
 
@@ -201,6 +204,7 @@ header{
                         color: $principal_03;
                         font-size: rem(25px);
                         font-weight: 250;
+                        transition: .2s ease;
 
                         @include bp(tablet){
                             font-size: rem(50px);
