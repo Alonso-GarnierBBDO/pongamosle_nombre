@@ -181,7 +181,7 @@ header{
 
                 li{
 
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
                     transform: translateX(-300px);
                     transition: 1s ease;
                     opacity: 0;
@@ -199,12 +199,16 @@ header{
                     a{
                         text-decoration: none;
                         color: $principal_03;
-                        font-size: rem(23px);
+                        font-size: rem(25px);
                         font-weight: 400;
 
                         @include bp(tablet){
                             font-size: rem(50px);
                         }
+                    }
+
+                    a.active{
+                        font-weight: bold;
                     }
                 }
 

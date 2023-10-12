@@ -1,5 +1,9 @@
 'use client';
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Link from 'next/link'
+import { usePathname, useParams } from 'next/navigation'
+
+
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Logo from '@/assets/img/header/logo.svg';
@@ -8,9 +12,20 @@ function Header() {
 
     const [activeMenu, setActiveMenu] = useState(false);
     const [removeMenu, setRemoveMenu] = useState(false);
+    const pathname = usePathname();
+    const [url, setUrl] = useState(pathname);
+    const params = useParams();
 
     gsap.registerPlugin(TextPlugin);
 
+    useEffect(() => {
+        const hash = window.location.hash;
+        setUrl(`${pathname}${hash}`);
+
+    }, [params]);
+
+
+    // Animacion del menu
     const openMenu = () => {
 
         if(activeMenu){
@@ -54,22 +69,22 @@ function Header() {
                     <section className="menu">
                         <ul>
                             <li>
-                                <a onClick={openMenu} href="#">Pongámosle nombre</a>
+                                <Link onClick={openMenu} className={ url == '/#home' ? 'active' : '' }  href="/#home">Pongámosle nombre</Link>
                             </li>
                             <li>
-                                <a onClick={openMenu} href="#">Cifras de violencia sexual</a>
+                                <Link onClick={openMenu} className={ url == '/#cifras' ? 'active' : '' } href="/#cifras">Cifras de violencia sexual</Link>
                             </li>
                             <li>
-                                <a onClick={openMenu} href="#">Tipos de violencia</a>
+                                <Link onClick={openMenu} className={ url == '/#tipos' ? 'active' : '' } href="/#tipos">Tipos de violencia</Link>
                             </li>
                             <li>
-                                <a onClick={openMenu} href="#">Comparte la campaña</a>
+                                <Link onClick={openMenu} className={ url == '/#comparte' ? 'active' : '' } href="/#comparte">Comparte la campaña</Link>
                             </li>
                             <li>
-                                <a onClick={openMenu} href="#">Organizaciones participantes</a>
+                                <Link onClick={openMenu} className={ url == '/#organizaciones' ? 'active' : '' } href="/#organizaciones">Organizaciones participantes</Link>
                             </li>
                             <li>
-                                <a onClick={openMenu} href="#">Contáctanos</a>
+                                <Link onClick={openMenu} className={ url == '/#contacto' ? 'active' : '' } href="/#contacto">Contáctanos</Link>
                             </li>
                         </ul>
                     </section>
