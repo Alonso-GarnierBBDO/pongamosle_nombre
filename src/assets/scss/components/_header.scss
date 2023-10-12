@@ -209,6 +209,10 @@ header{
                         @include bp(tablet){
                             font-size: rem(50px);
                         }
+
+                        &:hover{
+                            font-weight: bold;
+                        }
                     }
 
                     a.active{
