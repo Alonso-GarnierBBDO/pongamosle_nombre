@@ -128,10 +128,10 @@ header{
     .item{
 
         position: fixed;
-        top: -100%;
+        top: -100vh;
         left: 0px;
         width: calc(100vw - 30px);
-        height: 100%;
+        height: 100vh;
         background-color: $secundario_03;
         transition: .5s ease;
         display: grid;
@@ -151,7 +151,7 @@ header{
 
             content: "";
             position: fixed;
-            top: -100%;
+            top: -100vh;
             left: 0px;
             background-color: $principal_02;
             width: 100vw;
@@ -232,21 +232,21 @@ header{
 
     .item.active{
 
-        top: 0%;
+        top: 0vh;
 
         &::after{
-            top: 0%;
+            top: 0vh;
         }
 
     }
 
     .item.remove{
 
-        top: -100%;
+        top: -100vh;
         transition: 1.2s ease;
 
         &::after{
-            top: -100%;
+            top: -100vh;
             transition: .7s ease;
         }
     }
