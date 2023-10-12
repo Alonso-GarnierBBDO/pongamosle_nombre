@@ -128,7 +128,7 @@ header{
     .item{
 
         position: fixed;
-        top: -100%;
+        top: -120%;
         left: 0px;
         width: calc(100vw - 30px);
         height: 100vh;
@@ -151,7 +151,7 @@ header{
 
             content: "";
             position: fixed;
-            top: -100%;
+            top: -120%;
             left: 0px;
             background-color: $principal_02;
             width: 100vw;
