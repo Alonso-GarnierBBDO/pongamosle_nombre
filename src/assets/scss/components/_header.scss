@@ -238,11 +238,11 @@ header{
 
     .item.remove{
 
-        top: -100%;
+        top: -120%;
         transition: 1s ease;
 
         &::after{
-            top: -100%;
+            top: -120%;
             transition: .5s ease;
         }
     }
