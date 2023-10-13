@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Logo from '@/assets/img/header/logo.svg';
 import Background from '@/assets/img/home/backgroud_home.svg';
 import Personas from '@/assets/img/home/personas.svg';
@@ -7,10 +9,18 @@ import { motion } from "framer-motion"
 
 function InicioComponent(){
 
+
+    const [heightItem, setHeightItem] = useState(0);
+
+    useEffect(() => {
+        // Accede a window.innerHeight en la fase de cliente
+        setHeightItem(window.innerHeight);
+    }, []);
+
     const styles = {
 
         backgroundImage: `url(${ Background.src })`,
-        height: `${window.innerHeight}px`
+        height: `${heightItem.toString()}px`
 
     }
 
