@@ -1,6 +1,8 @@
 // Components
 @import './variables';
 @import './components/header';
+@import './pages/home/inicio';
+@import './pages/home/mensajes';
 
 body,
 *,
@@ -12,3 +14,8 @@ main{
 html{
     background-color: $principal_01;
 }
+
+.sectionScroll{
+    position: relative;
+    z-index: -1;
+} 
