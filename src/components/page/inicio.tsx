@@ -10,6 +10,7 @@ function InicioComponent(){
     const styles = {
 
         backgroundImage: `url(${ Background.src })`,
+        height: `${window.innerHeight}px`
 
     }
 
