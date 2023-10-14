@@ -7,6 +7,7 @@ header{
     display: flex;
     justify-content: flex-end;
     padding: 0px 25px;
+    z-index: 999;
 
     @include bp(tablet){
         top: 50px;

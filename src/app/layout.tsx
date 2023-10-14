@@ -3,6 +3,7 @@ import Header from '@/components/static/header'
 
 // Imports scss
 import '../assets/scss/global.scss';
+import useLocoScroll from '@/hook/useLocoScroll';
 
 
 import type { Metadata } from 'next'
@@ -20,6 +21,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="es">
       <body className={inter.className}>

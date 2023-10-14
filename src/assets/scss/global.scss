@@ -1,8 +1,11 @@
+@import 'node_modules/locomotive-scroll/dist/locomotive-scroll';
+
 // Components
 @import './variables';
 @import './components/header';
 @import './pages/home/inicio';
 @import './pages/home/mensajes';
+@import './pages/home/violencia';
 
 body,
 *,
@@ -15,7 +18,29 @@ html{
     background-color: $principal_01;
 }
 
+// main{
+//     overflow: hidden;
+// }
+
+// main{
+//     width: 100vw;
+//     height: 100vh; 
+// }
+
+.locomotive_scroll{
+    overflow: auto;
+}
+
 .sectionScroll{
     position: relative;
     z-index: -1;
 } 
+
+.c-scrollbar{
+    display: none;
+
+    &:last-of-type{
+        display: block;
+    }
+
+}

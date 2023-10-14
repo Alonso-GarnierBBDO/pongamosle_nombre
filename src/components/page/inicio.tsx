@@ -29,7 +29,7 @@ function InicioComponent(){
             <section style={styles} className="inicio_home" data-scroll data-scroll-speed="0">
                 <div className="contenido">
                     <section className="item">
-                        <img src={Logo.src} alt="Pongámosle nombre" title="Pongámosle nombre"/>
+                        <img data-scroll data-scroll-speed="2" src={Logo.src} alt="Pongámosle nombre" title="Pongámosle nombre"/>
                     </section>
                     <section className="item">
                         <motion.div
