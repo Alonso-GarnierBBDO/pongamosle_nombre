@@ -18,14 +18,20 @@ html{
     background-color: $principal_01;
 }
 
-// main{
-//     overflow: hidden;
-// }
+.normalSize{
+    width: calc(100vw - 21px);
+    padding: 10px;
 
-// main{
-//     width: 100vw;
-//     height: 100vh; 
-// }
+    @include bp(tablet){
+        width: calc(100vw - 38px);        
+    }
+
+    @include bp(laptop){
+        width: calc(100vw - 200px);
+        height: calc(100vh - 200px);
+        padding: 100px;
+    }
+}
 
 .locomotive_scroll{
     overflow: auto;

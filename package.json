@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "next": "13.5.4",
@@ -17,6 +18,7 @@
     "sass": "^1.69.2"
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.8",
     "@types/locomotive-scroll": "^4.1.1",
     "@types/node": "^20",
     "@types/react": "^18",
