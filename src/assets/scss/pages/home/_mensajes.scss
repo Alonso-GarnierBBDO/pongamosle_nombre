@@ -1,9 +1,13 @@
 .mensajes_home{
 
-    width: calc(100vw - 38px);
+    width: calc(100vw - 21px);
     // height: calc(100vh - 20px);
     padding: 10px;
     transition: .5s ease;
+
+    @include bp(tablet){
+        width: calc(100vw - 38px);        
+    }
 
     @include bp(laptop){
         width: calc(100vw - 200px);
