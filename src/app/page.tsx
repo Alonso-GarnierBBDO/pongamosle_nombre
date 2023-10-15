@@ -4,14 +4,12 @@ import React, { useEffect } from "react";
 import InicioComponent from "@/components/page/inicio";
 import MensajesComponents from "@/components/page/mensajes";
 import ViolenciaComponent from "@/components/page/violencia";
-import useLocoScroll from "@/hook/useLocoScroll";
+import locoScrollFunction from "@/hook/useLocoScroll";
 
 export default function Home() {
 
-  
-  useEffect(() => {
-    useLocoScroll();
-  }, []);
+  useLocoScrollFunction();
+
 
   return (
       <>
@@ -28,5 +26,12 @@ export default function Home() {
         </section>
       </>
   )
+}
+
+
+function useLocoScrollFunction() {
+  useEffect(() => {
+    locoScrollFunction();
+  }, []);
 }
  
