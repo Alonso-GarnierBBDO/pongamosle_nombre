@@ -5,7 +5,7 @@ import InicioComponent from "@/components/page/inicio";
 import MensajesComponents from "@/components/page/mensajes";
 import ViolenciaComponent from "@/components/page/violencia";
 import locoScrollFunction from "@/hook/useLocoScroll";
-import RepeticionComponent from "@/components/page/repeticion";
+import ComunidadComponent from "@/components/page/comunidad";
 
 export default function Home() {
 
@@ -18,14 +18,14 @@ export default function Home() {
           <section className='sectionScroll'>
             <InicioComponent/>
           </section>
-          <section className='sectionScroll'>
+          <section className='sectionScroll mensajes_main'>
             <MensajesComponents/>
           </section>
           <section className="sectionScroll">
             <ViolenciaComponent/>
           </section>
           <section className="sectionScroll">
-            <RepeticionComponent/>
+            <ComunidadComponent/>
           </section>
         </section>
       </>

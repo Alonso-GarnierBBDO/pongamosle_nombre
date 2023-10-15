@@ -1,0 +1,98 @@
+.comunidad{
+
+    margin: 50px auto 0px auto;
+
+    @include bp(tablet){
+        display: flex;
+        align-items: center;
+        margin: 0px auto 0px auto;
+    }
+
+    .contentViolencia{
+
+        max-width: 700px;
+        text-align: center;
+        font-family: $font_secundario;
+        font-size: rem(20px);
+        color: $principal_02;
+        display: block;
+
+        @include bp(tablet){
+            display: none;
+        }
+
+
+        p{
+            overflow: hidden;
+            font-size: rem(17px);
+
+            .letter{
+                display: inline-block;
+            }
+
+        }
+
+    }
+
+    .box{
+
+        background-color: $principal_02;
+        margin: 25px auto;
+        padding: 15px 15px 0px 15px;
+        border-radius: 15px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+
+        @include bp(tablet){
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            align-items: center;
+            justify-content: center;
+            padding: 15px 15px 0px 15px;
+            overflow: initial;
+        }
+
+        
+        @include bp(laptop){
+            padding: 15px 15px 0px 100px;
+        }
+
+        p{
+            text-align: center;
+            font-family: $font_secundario;
+            font-size: rem(17px);
+            color: $secundario_04;
+
+            @include bp(tablet){
+                text-align: left;
+                font-size: rem(25px);
+            }
+
+            @include bp(laptop){
+                font-size: rem(33px);
+            }
+
+            @include bp(escritorio){
+                font-size: rem(40px);
+            }
+
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            transform: translateY(10px);
+            user-select: none;
+            pointer-events: none;
+
+            @include bp(tablet){
+                transform: translateY(-7.5%) scale(1.15);
+            }
+        }
+
+    }
+
+}

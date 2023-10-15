@@ -6,6 +6,7 @@
 @import './pages/home/inicio';
 @import './pages/home/mensajes';
 @import './pages/home/violencia';
+@import './pages/home/comunidad';
 
 body,
 *,
@@ -34,7 +35,7 @@ html{
 }
 
 .locomotive_scroll{
-    overflow: auto;
+    overflow: hidden;
 }
 
 .sectionScroll{
