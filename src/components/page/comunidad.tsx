@@ -11,7 +11,7 @@ import BackgroundFloresEscritorio from '@/assets/img/home/background-flores-escr
 function ComunidadComponent(){
 
     const styleBox =  {
-        backgroundImage: `url(${window.innerWidth < 700? BackgroundFlores.src  : ''})`,
+        backgroundImage: `url(${window.innerWidth < 700? BackgroundFlores.src  : 'initial'})`,
     }
 
     return(
