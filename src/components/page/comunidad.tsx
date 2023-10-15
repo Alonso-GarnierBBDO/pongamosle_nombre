@@ -8,16 +8,21 @@ import { motion} from 'framer-motion';
 import LebianaImage from '@/assets/img/home/lesbiana.png';
 import BackgroundFlores from '@/assets/img/home/flores_background.png';
 import BackgroundFloresEscritorio from '@/assets/img/home/background-flores-escrtorio.png';
+import { useState, useEffect } from 'react';
 
 function ComunidadComponent(){
 
-    let styleBox;
+    let [styleBox, setStyleBox] = useState({});
 
-    if(window.innerWidth <= 700){
-        styleBox =  {
-            backgroundImage: `url(${ BackgroundFlores.src})`,
+    // let styleBox = {};
+
+    useEffect( () => {
+        if(window.innerWidth <= 700){
+            setStyleBox({
+                backgroundImage: `url(${ BackgroundFlores.src})`,
+            });
         }
-    }
+    },[])
 
     return(
         <>
