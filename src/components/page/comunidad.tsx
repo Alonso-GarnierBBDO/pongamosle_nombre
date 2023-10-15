@@ -1,6 +1,7 @@
 /**
  * En este archivo se muestra la tercer seccion del home la cual es la repeticion
  */
+'use client';
 
 import Image from 'next/image';
 import { motion} from 'framer-motion';
@@ -10,8 +11,12 @@ import BackgroundFloresEscritorio from '@/assets/img/home/background-flores-escr
 
 function ComunidadComponent(){
 
-    const styleBox =  {
-        backgroundImage: `url(${window.innerWidth < 700? BackgroundFlores.src  : 'initial'})`,
+    let styleBox;
+
+    if(window.innerWidth <= 700){
+        styleBox =  {
+            backgroundImage: `url(${ BackgroundFlores.src})`,
+        }
     }
 
     return(
