@@ -1,53 +1,145 @@
 .mensajes_home{
 
-    width: calc(100vw - 200px);
-    height: calc(100vh - 200px);
-    padding: 100px;
+    width: calc(100vw - 38px);
+    // height: calc(100vh - 20px);
+    padding: 10px;
     transition: .5s ease;
+
+    @include bp(laptop){
+        width: calc(100vw - 200px);
+        height: calc(100vh - 200px);
+        padding: 100px;
+    }
 
     .container{
         width: 100%;
         height: 100%;
         background-color: $principal_02;
-        border-radius: 30px;
+        border-radius: 15px;
         transition: .2s linear;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
+        padding: 20px 0px;
+
+        @include bp(laptop){
+            padding: 0px 0px;
+            border-radius: 30px;
+        }
 
         .content{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
+           
+            grid-gap: 30px;
+            align-items: center;
+            display: flex;
+            flex-flow: column;
+            width: 95%;
 
-            .item{
-                // height: 80px;
-                border-radius: 20px;
+            @include bp(tablet){
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include bp(laptop){
+                width: 50%;
+            }
+
+            .allContent{
+
+                width: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px 20px;
-                position: relative;
+                flex-flow: row wrap;
+                justify-content: flex-end;
 
-                span{
-                    position: absolute;
-                    display: block;
-                    width: 25px;
-                    height: 25px;
-                    bottom: -12.5px;
-                    right: 30px;
-                    transform: rotate(45deg);
+                &:nth-of-type(odd){
+                    justify-content: flex-start;
                 }
 
-                p{
-                    font-size: 1.5rem;
-                    max-width: 350px;
-                    text-align: center;
-                    font-family: $font_secundario;
+                &:nth-child(3){
+
+                    @include bp(tablet){
+                        grid-area: 2 / span 2;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .item{
+                        @include bp(laptop){
+                            width: 350px;
+                        }
+                    }
+                    
                 }
 
+                &:nth-child(5){
+                    grid-area: 4 / span 2;
 
+                    .item{
+                        
+                        @include bp(laptop){
+                            width: 350px;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                    
+                }
+
+                .item{
+                    position: relative;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 0px;
+                    width: calc(75% - 20px);
+                    opacity: 0;
+                    transition: .5s ease;
+
+                    @include bp(tablet){
+                        padding: 20px;
+                        border-radius: 20px;
+                        width: calc(100% - 20px);
+                        margin: auto;
+                    }
+
+                    span{
+                        position: absolute;
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        bottom: -7.5px;
+                        right: 30px;
+                        transform: rotate(45deg);
+
+                        @include bp(laptop){
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                    }
+    
+                    p{
+                        font-size: 1rem;
+                        max-width: 350px;
+                        text-align: center;
+                        font-family: $font_secundario;
+
+                        @include bp(laptop){
+                            padding: 0px;
+                            border-radius: 20px;
+                        }
+
+                    }
+                }
+
+            }
+
+            .allContent.active{
+                .item{
+                    opacity: 1;
+                }
             }
 
         }

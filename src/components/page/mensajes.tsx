@@ -63,13 +63,37 @@ const MensajesComponents =  () => {
                                     backgroundColor: item.color,
                                 }
 
-                                return (
+                                if(key % 2 == 0){
+                                    return (
                                     
-                                    <div className="item" style={style} key={key}>
-                                        <p>{item.content}</p>
-                                        <span className="arrow" style={styleArrow}></span>
-                                    </div>
-                                )
+                                        <div className="allContent" key={key} data-scroll data-scroll-speed="2">
+                                            <div className="item" style={style}>
+                                                <p>{item.content}</p>
+                                                <span className="arrow" style={styleArrow}></span>
+                                            </div>
+                                        </div>
+                                    )
+                                }else if(key % 3 === 0){
+                                    return (
+                                    
+                                        <div className="allContent" key={key} data-scroll data-scroll-speed="1.5">
+                                            <div className="item" style={style}>
+                                                <p>{item.content}</p>
+                                                <span className="arrow" style={styleArrow}></span>
+                                            </div>
+                                        </div>
+                                    )
+                                }else{
+                                    return (
+                                    
+                                        <div className="allContent" key={key} data-scroll data-scroll-speed="1">
+                                            <div className="item" style={style}>
+                                                <p>{item.content}</p>
+                                                <span className="arrow" style={styleArrow}></span>
+                                            </div>
+                                        </div>
+                                    )
+                                }
                             })
                         }
                     </div>
