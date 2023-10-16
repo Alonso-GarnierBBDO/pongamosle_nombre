@@ -1,0 +1,119 @@
+.victimas_component{
+
+    width: calc(100vw - 21px);
+    padding: 10px;
+    transition: .5s ease;
+    margin-top: 10px;
+
+    @include bp(tablet){
+        width: calc(100vw);        
+    }
+
+    @include bp(laptop){
+        width: calc(100vw - 200px);
+        height: calc(100vh - 200px);
+        padding: 100px;
+    }
+
+    .content{
+
+        width: calc(100% - 40px);
+        height: 100%;
+        background-color: $principal_02;
+        border-radius: 15px;
+        transition: .2s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        position: relative;
+        padding: 20px 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include bp(tablet){
+            width: calc(100% - 20px);
+            background-size: contain;
+            background-position: left;
+        }
+
+        @include bp(laptop){
+            padding: 0px 0px;
+            border-radius: 30px;
+            width: 100%;
+        }
+
+
+        .victimas {
+            padding: 35px 20px;
+            border: 2px solid $principal_01;
+            border-radius: 15px;
+            text-align: center;
+            width: calc(100% - 48px);
+            color: $principal_03;
+            font-family: $font_secundario;
+            font-size: rem(15px);
+      
+              @include bp(tablet){
+                  max-width: 700px;
+                  font-size: rem(25px);
+              }
+      
+              @include bp(laptop){
+                  font-size: rem(32px);
+                  max-width: 850px;
+              }
+      
+        }
+
+        .content_chat {
+            .ponerle-nombre {
+              text-align: center;
+              background-color: $principal_01;
+              border-radius: 15px;
+              padding: 20px;
+              transform: translate(115%, -10px) scale(0.2);
+              position: relative;
+              color: $principal_02;
+              font-family: $font_secundario;
+              font-size: rem(18px);
+              transition: 1s ease;
+      
+              @include bp(tablet){
+                  max-width: 600px;
+                  font-size: rem(21px);
+                  padding: 25px;
+              }
+      
+              @include bp(laptop){
+                  font-size: rem(22px);
+              }
+      
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                right: 20px;
+                background-color: $principal_01;
+                width: 30px;
+                height: 30px;
+                transform: rotate(45deg);
+              }
+            }
+        }
+
+        .content_chat.active{
+            .ponerle-nombre{
+                transform: translate(0%, -10px) scale(1);
+    
+                @include bp(laptop){
+                    font-size: rem(22px);
+                    transform: translate(10%, -10px) scale(1);
+                }
+            }
+        }
+
+    }
+
+}

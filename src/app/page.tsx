@@ -10,6 +10,7 @@ import PonerleNombreComponent from "@/components/page/ponerle_nombre";
 import MotivcacionComponent from "@/components/page/motivacion";
 import IniciativaComponent from "@/components/page/iniciativa";
 import CifrasComponent from "@/components/page/cifras";
+import VictimasComponent from "@/components/page/victimas";
 
 export default function Home() {
 
@@ -42,6 +43,9 @@ export default function Home() {
           </section>
           <section className="sectionScroll">
             <CifrasComponent/>
+          </section>
+          <section className="sectionScroll">
+            <VictimasComponent/>
           </section>
         </section>
       </>

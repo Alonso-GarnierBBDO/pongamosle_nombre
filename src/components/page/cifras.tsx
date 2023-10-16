@@ -56,18 +56,33 @@ function CifrasComponent(){
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ type: "spring" }} 
                 >
-                    <section className='item'>
+                    <motion.section 
+                        className='item'
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ type: "spring" }} 
+                    >
                         <span>14</span>
                         <p>Denuncias diarias de violencia sexual</p>
-                    </section>
-                    <section className='item'>
+                    </motion.section>
+                    <motion.section 
+                        className='item'
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ type: "spring" }} 
+                    >
                         <span>23</span>
                         <p>Niñas y adolescentes son abusada sexualmente todos los días</p>
-                    </section>
-                    <section className='item'>
+                    </motion.section>
+                    <motion.section 
+                        className='item'
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ type: "spring" }} 
+                    >
                         <span>45%</span>
                         <p>De las mujeres guatemaltecas no conocen sus derechos</p>
-                    </section>
+                    </motion.section>
                 </motion.section>
             </section>
         </>
