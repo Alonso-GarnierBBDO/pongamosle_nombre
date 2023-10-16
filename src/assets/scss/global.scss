@@ -7,12 +7,18 @@
 @import './pages/home/mensajes';
 @import './pages/home/violencia';
 @import './pages/home/comunidad';
+@import './pages/home/ponerleNombre';
+@import './pages/home/motivaciones';
 
 body,
 *,
 main{
     padding: 0px;
     margin: 0px;
+}
+
+main{
+    z-index: -1;
 }
 
 html{
@@ -36,6 +42,8 @@ html{
 
 .locomotive_scroll{
     overflow: hidden;
+    z-index: 1;
+    position: relative;
 }
 
 .sectionScroll{

@@ -6,6 +6,9 @@ import MensajesComponents from "@/components/page/mensajes";
 import ViolenciaComponent from "@/components/page/violencia";
 import locoScrollFunction from "@/hook/useLocoScroll";
 import ComunidadComponent from "@/components/page/comunidad";
+import PonerleNombreComponent from "@/components/page/ponerle_nombre";
+import MotivcacionComponent from "@/components/page/motivacion";
+import IniciativaComponent from "@/components/page/iniciativa";
 
 export default function Home() {
 
@@ -26,6 +29,15 @@ export default function Home() {
           </section>
           <section className="sectionScroll">
             <ComunidadComponent/>
+          </section>
+          <section className="sectionScroll">
+            <PonerleNombreComponent/>
+          </section>
+          <section className="sectionScroll">
+            <MotivcacionComponent/>
+          </section>
+          <section className="sectionScroll">
+            <IniciativaComponent/>
           </section>
         </section>
       </>
