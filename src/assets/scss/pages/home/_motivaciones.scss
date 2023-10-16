@@ -12,12 +12,13 @@
 
     @include bp(tablet){
         width: calc(100vw - 38px);        
-        margin-top: 100px;
+        margin-top: 0px;
     }
 
     @include bp(laptop){
         padding: 0px 50px;
         width: calc(100vw - 100px);
+        margin-top: 100px;
     }
 
 
@@ -106,7 +107,7 @@
         width: 100%;
 
         .swiper{
-            border-radius: 10px;
+            border-radius: 15px;
             display: grid;
             grid-template-columns: repeat(2,calc(50% - 5px));
             justify-items: center;
@@ -119,6 +120,8 @@
                 display: flex;
                 height: 30px;
                 position: relative;
+                opacity: 1;
+                transition: .2s ease;
 
                 &::before{
                     content: "";
@@ -128,6 +131,11 @@
                     width: 30px;
                 }
 
+            }
+
+            .swiper-button-prev.swiper-button-disabled,
+            .swiper-button-next.swiper-button-disabled{
+                opacity: 0.5;
             }
 
             .swiper-button-prev{
@@ -162,7 +170,7 @@
                 background-color: $secundario_03;
                 height: calc(100% - 40px);
                 padding: 20px;
-                border-radius: 10px;
+                border-radius: 15px;
                 display: flex;
                 flex-flow: column;
                 justify-content: center;

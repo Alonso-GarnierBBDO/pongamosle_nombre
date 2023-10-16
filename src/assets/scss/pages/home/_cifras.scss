@@ -1,0 +1,168 @@
+.cifras_components{
+
+    width: calc(100vw - 21px);
+    padding: 10px;
+    transition: .5s ease;
+    margin-top: 10px;
+
+    @include bp(tablet){
+        width: calc(100vw);        
+    }
+
+    @include bp(laptop){
+        width: calc(100vw - 200px);
+        height: calc(100vh - 200px);
+        padding: 100px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .options{
+
+        background-color: $principal_03;
+        border-radius: 15px;
+        width: calc(100% - 40px);
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        padding: 20px;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        row-gap: 10px;
+        column-gap: 10px;
+        margin-top: 25px;
+
+        @include bp(tablet){
+            width: calc(100% - 100px);
+        }
+
+        @include bp(laptop){
+            padding: 50px;
+            grid-template-columns: repeat(4, 25%);
+            align-items: center;
+        }
+
+        .item{
+
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            @include bp(laptop){
+                max-width: 250px;
+                width: 100%;
+            }
+
+            img{
+                width: 45px;
+                height: auto;
+                margin-bottom: 5px;
+                user-select: none;
+                pointer-events: none;
+
+                @include bp(laptop){
+                    margin-bottom: 15px;
+                }
+
+            }
+
+            p{
+                text-align: center;
+                color: $principal_02;
+                font-family: $font_secundario;
+                margin-bottom: 10px;
+                font-size: rem(15px);
+
+                @include bp(laptop){
+                    font-size: rem(18px);
+                }
+
+            }
+
+        }
+
+
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: $principal_02;
+        font-family: $font_secundario;
+        font-size: rem(36px);
+        font-weight: bold;
+        text-align: center;
+
+        @include bp(tablet){
+            margin-top: 30px;
+        }
+
+        @include bp(laptop){
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: rem(45px);
+        }
+
+    }
+
+    .cifras-actuales{
+
+        @include bp(tablet){
+            display: grid;
+            grid-template-columns: repeat(3, calc(33.33% - 10px));
+            grid-gap: 15px;
+        }
+
+        @include bp(laptop){
+            grid-template-columns: 30% 40% 30%;
+        }
+
+        .item{
+
+            border: 1px solid $principal_03;
+            margin-bottom: 30px;
+            padding: 25px 15px;
+            border-radius: 15px;
+            text-align: center;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+
+            @include bp(laptop){
+                padding: 35px 25px;
+            }
+
+            span{
+
+                font-size: rem(40px);
+                font-family: $font_secundario;
+                color: $principal_02;
+                display: block;
+                margin-bottom: 10px;
+
+            }
+
+            p{
+                
+                font-size: rem(20px);
+                font-family: $font_secundario;
+                color: $principal_02;
+                display: block;
+                margin-bottom: 10px;
+
+                @include bp(laptop){
+                    width: 350px;
+                    margin: 0px auto 10px auto;
+                    font-size: rem(25px);
+                }
+
+            }
+
+        }
+
+    }
+
+
+}

@@ -9,6 +9,7 @@ import ComunidadComponent from "@/components/page/comunidad";
 import PonerleNombreComponent from "@/components/page/ponerle_nombre";
 import MotivcacionComponent from "@/components/page/motivacion";
 import IniciativaComponent from "@/components/page/iniciativa";
+import CifrasComponent from "@/components/page/cifras";
 
 export default function Home() {
 
@@ -38,6 +39,9 @@ export default function Home() {
           </section>
           <section className="sectionScroll">
             <IniciativaComponent/>
+          </section>
+          <section className="sectionScroll">
+            <CifrasComponent/>
           </section>
         </section>
       </>
