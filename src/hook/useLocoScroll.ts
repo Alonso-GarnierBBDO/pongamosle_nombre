@@ -101,8 +101,6 @@ const useLocoScroll = () => {
                     })
                 }
 
-                console.log(arg.currentElements);
-
             });
 
         }

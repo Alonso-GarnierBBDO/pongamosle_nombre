@@ -7,7 +7,6 @@ function PonerleNombreComponent(){
     const viewItem = useInView(chat, { once: true });
 
     useEffect(()=>{
-        console.log()
         if(viewItem){
             const tagChat : HTMLElement | null = chat.current;
             if(chat && tagChat){

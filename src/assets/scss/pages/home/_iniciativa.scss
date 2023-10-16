@@ -1,0 +1,134 @@
+.lgtbi-section{
+
+    width: calc(100vw - 21px);
+    padding: 10px;
+    transition: .5s ease;
+    margin-top: 10px;
+
+    @include bp(tablet){
+        width: calc(100vw);        
+    }
+
+    @include bp(laptop){
+        width: calc(100vw - 200px);
+        height: calc(100vh - 200px);
+        padding: 100px;
+    }
+
+    .container{
+
+        width: calc(100% - 40px);
+        height: 100%;
+        background-color: $principal_02;
+        border-radius: 15px;
+        transition: .2s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        row-gap: 25px;
+        position: relative;
+        padding: 20px 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include bp(tablet){
+            width: 100%;
+            background-size: contain;
+            background-position: left;
+        }
+
+        @include bp(laptop){
+            padding: 0px 0px;
+            border-radius: 30px;
+        }
+
+        .message{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: $principal_03;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: rem(13px);
+            position: relative;
+            margin-bottom: 10px;
+            color: $principal_02;
+            font-family: $font_secundario;
+            transform: translateX(110%) scale(0.3);
+            transition: .7s ease;
+
+            @include bp(tablet){
+                max-width: 500px;
+                font-size: rem(15px);
+                padding: 25px;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                right: 20px;
+                width: 25px;
+                height: 25px;
+                background-color: $principal_03;
+                transform: rotate(45deg);
+                z-index: 0;
+
+                @include bp(tablet){
+                    right: 35px;
+                }
+            }
+
+            h2{
+                z-index: 1;
+            }
+
+        }
+
+        .viewChat.active{
+            .message{
+                transform: translateX(0%) scale(1);
+            }
+        }
+
+
+        .content{
+
+            @include bp(tablet){
+                max-width: 800px;
+            }
+
+            h2{
+                text-align: center;
+                margin-bottom: 15px;
+                color: $principal_01;
+                font-family: $font_secundario;
+                font-size: rem(25px);
+
+                @include bp(tablet){
+                    font-size: rem(35px);
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            p{
+                text-align: center;
+                font-size: rem(17px);
+                color: $principal_03;
+
+                @include bp(tablet){
+                    font-size: rem(20px);
+                }
+
+            }
+
+        }
+
+    }
+
+}

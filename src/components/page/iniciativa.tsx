@@ -1,11 +1,42 @@
-
+import BackgroundIniciativa from '@/assets/img/home/iniciativa_background.png';
+import { useInView } from 'framer-motion';
+import { useRef, useEffect } from 'react';
 
 function IniciativaComponent(){
 
+    const chat = useRef<HTMLElement>(null);
+    const isInView = useInView(chat);
+    const styleBackground = {
+        backgroundImage: `url(${BackgroundIniciativa.src})`,
+    }
+
+
+    useEffect( () => {
+
+        const tagChat : HTMLElement | null = chat.current;
+
+        if(isInView && tagChat){
+
+            tagChat.classList.add('active');
+
+        }
+
+    }, [isInView])
+
     return(
         <>
-            <section className="normalSize">
-                <h1>Hola</h1>
+            <section className="normalSize lgtbi-section">
+                <section className="container" style={styleBackground}>
+                    <section className='viewChat' ref={chat}>
+                        <section className='message'>
+                            <h2>Es muy difícil reconocer la violencia, si no podemos vocalizar lo que vivimos.</h2>
+                        </section>
+                    </section>
+                    <section className='content'>
+                        <h2>PONGÁMOSLE NOMBRE</h2>
+                        <p>es una iniciativa creada con el propósito de educar sobre los derechos sexuales y reproductivos de mujeres, migrantes, personas de la comunidad LGBTIQ+ y personas con discapacidad en Guatemala, con el fin de concientizar, abordar y combatir los diversos tipos de violencia que enfrentan a diario. </p>
+                    </section>
+                </section>
             </section>
         </>
     )
