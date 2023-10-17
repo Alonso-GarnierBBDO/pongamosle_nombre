@@ -9,6 +9,11 @@
     src: url(../fonts/Gotham-Medium.otf);
 }
 
+@font-face {
+    font-family: gotham_ultra;
+    src: url(../fonts/gotham-ultra.ttf);
+}
+
 
 // Mixins
 
@@ -60,5 +65,5 @@ $secundario_04: #FFDADF;
 
 $font_principal: gotham_medium;
 $font_secundario: gotham_bold;
-
+$font_terciario: gotham_ultra;
 

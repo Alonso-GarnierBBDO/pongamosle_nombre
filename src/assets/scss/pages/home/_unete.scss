@@ -1,0 +1,392 @@
+.uneteComponent{
+
+    width: calc(100vw - 20px);
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+
+    @include bp(tablet){
+        width: calc(100vw - 20px);        
+        margin-top: 0px;
+    }
+
+    @include bp(laptop){
+        padding: 0px 50px;
+        width: calc(100vw - 100px);
+        margin-top: 100px;
+    }
+
+    .header_unete{
+
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+
+        @include bp(escritorio){
+            display: flex;
+            max-width: 900px;
+            column-gap: 30px;
+            flex-flow: row;
+        }
+
+    }
+
+    h2{
+
+        font-size: rem(33px);
+        text-align: center;
+        font-family: $font_terciario;
+        color: $principal_02;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @include bp(tablet){
+            margin: 25px 0px;
+        }
+
+        @include bp(laptop){
+            font-size: rem(45px);
+        }
+
+        @include bp(escritorio){
+            text-align: left;   
+            margin-bottom: 10px;
+        }
+
+    }
+
+    p{
+        text-align: center;
+        font-size: rem(15px);
+        font-family: $font_principal;
+        color: $principal_02;
+
+        @include bp(tablet){
+            font-size: rem(19px);
+            margin-bottom: 15px;
+        }
+
+        @include bp(laptop){
+            font-size: rem(20px);
+        }
+
+        @include bp(escritorio){
+            text-align: left;
+            font-size: rem(17px);
+        }
+    }
+
+    img{
+        @include bp(tablet){
+            width: calc(100vw);
+        }
+
+        @include bp(escritorio){
+            width: auto;
+        }
+    }
+
+    .slider{
+        margin-top: 20px;
+        width: 100%;
+        height: 300px;
+
+        @include bp(escritorio){
+            height: auto;
+        }
+
+        .slideContent{
+            
+            border-radius: 15px;
+
+            .item{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $principal_02;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .group{
+                    position: absolute;
+                    bottom: 10px;
+                    display: flex;
+                    width: calc(100% - 20px);
+                    justify-content: flex-end;
+                    column-gap: 10px;
+                    padding: 0px 10px;
+
+                    a,
+                    button{
+
+                        
+                        border: none;
+                        background-color: $principal_01 !important;
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        cursor: pointer;
+
+
+                        img{
+                            width: 50%;
+                            height: 50%;
+                            object-fit: contain;
+                            display: block;
+                        }
+
+                        svg{
+                            display: none;
+                            fill: $principal_02;
+                        }
+
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                width: 100%;
+                height: 10px;
+                z-index: 999;
+                position: relative;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 10px;
+
+                span{
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    background-color: $principal_03;
+                    border-radius: 50%;
+                    transition: .2s ease;
+                }
+
+                span.swiper-pagination-bullet-active{
+                    background-color: $principal_02;
+                }
+
+            }
+
+        }
+    }
+
+    .modal{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background: transparent;
+        z-index: 999;
+        backdrop-filter: blur(7px);
+        display: none;
+        opacity: 0;
+        // transition: .5s ease;
+
+        @include keyframes(animationModal){
+                                
+            0%{
+                display: block;
+                opacity: 1;
+
+            }
+            5%{
+                display: block;
+                opacity: 1;
+            }
+
+            95%{
+                display: block;
+                opacity: 0;
+            }
+            100%{
+                display: none;
+                opacity: 0;
+            }
+
+          }
+        @include animate(animationModal, .5s, ease, 1);
+
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .sharedContent{
+                background-color: $principal_03;
+                width: calc(80% - 30px);
+                border-radius: 15px;
+                display: flex;
+                flex-flow: column;
+                padding: 15px;
+
+                @include bp(tablet){
+                    width: 400px;
+                }
+
+                @include bp(laptop){
+                    padding: 35px;
+                    width: 500px;
+                }
+
+                h3{
+                    font-size: rem(30px);
+                    font-family: $font_terciario;
+                    color: $principal_02;
+
+                    @include bp(tablet){
+                        font-size: rem(40px);
+                    }
+
+                }
+
+                .header{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    @include bp(laptop){
+                        margin-bottom: 30px;
+                    }
+
+                    button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: transparent;
+                        border: none;
+
+                        svg{
+                            fill: $principal_02;
+                            @include bp(tablet){
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                    }
+
+                }
+
+                .body{
+                    .groups{
+                        display: flex;
+                        flex-flow: row;
+                        width: 100%;
+                        justify-content: space-around;
+                        margin-top: 20px;
+
+                        @include bp(tablet){
+                            justify-content: space-between;
+                        }
+
+                        button,
+                        a{
+
+                            width: 40px;
+                            height: 40px;
+                            background-color: $principal_01 !important;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: none;
+
+                            @include bp(tablet){
+                                width: 60px;
+                                height: 60px;
+                            }
+
+                            img{
+                                width: 60%;
+                                height: 60%;
+                                object-fit: contain;
+                            }
+
+                            svg{
+                                path{
+                                    fill: $principal_02;
+                                    stroke: $principal_02;
+                                }
+
+                                @include bp(tablet){
+                                    width: 60%;
+                                    height: 60%;
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    .copy{
+                        margin-top: 15px;
+                        display: flex;
+                        column-gap: 10px;
+                        width: 100%;
+
+                        input{
+                            width: 100%;
+                        }
+
+                        button{
+                            background-color: transparent;
+                            border: none;
+
+
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+
+    .modal.active{
+        display: block;
+        opacity: 1;
+
+        @include keyframes(animationModalOpen){
+                                
+            0%{
+                display: none;
+                opacity: 0;
+
+            }
+            100%{
+                display: block;
+                opacity: 1;
+            }
+
+          }
+        @include animate(animationModalOpen, .2s, ease, 1);
+
+    }
+
+
+
+}

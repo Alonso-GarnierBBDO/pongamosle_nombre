@@ -6,7 +6,7 @@
     margin-top: 10px;
 
     @include bp(tablet){
-        width: calc(100vw);        
+        width: calc(100vw - 20px);        
         margin-top: 0px;
     }
 
@@ -34,7 +34,7 @@
         background-repeat: no-repeat;
 
         @include bp(tablet){
-            width: calc(100% - 20px);
+            width: calc(100% - 40px);
             background-size: contain;
             background-position: left;
         }
@@ -100,6 +100,7 @@
                 width: 30px;
                 height: 30px;
                 transform: rotate(45deg);
+                z-index: -1;
               }
             }
         }

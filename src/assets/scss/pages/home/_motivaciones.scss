@@ -11,7 +11,7 @@
     margin-top: 20px;
 
     @include bp(tablet){
-        width: calc(100vw - 38px);        
+        width: calc(100vw - 20px);        
         margin-top: 0px;
     }
 
