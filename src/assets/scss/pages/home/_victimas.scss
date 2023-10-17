@@ -7,6 +7,7 @@
 
     @include bp(tablet){
         width: calc(100vw);        
+        margin-top: 0px;
     }
 
     @include bp(laptop){

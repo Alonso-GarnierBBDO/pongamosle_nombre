@@ -11,6 +11,7 @@ import MotivcacionComponent from "@/components/page/motivacion";
 import IniciativaComponent from "@/components/page/iniciativa";
 import CifrasComponent from "@/components/page/cifras";
 import VictimasComponent from "@/components/page/victimas";
+import MotivcacionSegundaComponent from "@/components/page/motivacion_segunda";
 
 export default function Home() {
 
@@ -46,6 +47,9 @@ export default function Home() {
           </section>
           <section className="sectionScroll">
             <VictimasComponent/>
+          </section>
+          <section className="sectionScroll">
+            <MotivcacionSegundaComponent/>
           </section>
         </section>
       </>
