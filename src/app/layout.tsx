@@ -1,9 +1,8 @@
 // Components principales
-import Header from '@/components/static/header'
+import Header from '@/components/static/header';
 
 // Imports scss
 import '../assets/scss/global.scss';
-import useLocoScroll from '@/hook/useLocoScroll';
 
 
 import type { Metadata } from 'next'

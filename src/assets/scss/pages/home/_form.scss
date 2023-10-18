@@ -3,7 +3,7 @@
     width: calc(100vw - 21px);
     padding: 10px;
     transition: .5s ease;
-    margin-top: 10px;
+    margin-top: 50px;
 
     @include bp(tablet){
         width: calc(100vw - 40px);        
@@ -90,8 +90,8 @@
                 font-family: $font_principal;
 
                 @include bp(laptop){
-                    font-size: rem(25px);
-                    // text-align: left;
+                    font-size: rem(20px);
+                    text-align: left;
                 }
 
             }
@@ -118,6 +118,11 @@
                 &::placeholder{
                     color: $secundario_06;
                     font-size: rem(15px);
+                }
+
+                &:disabled{
+                    opacity: 0.5;
+                    cursor: no-drop;
                 }
 
             }
@@ -166,6 +171,16 @@
                         background-color: $secundari_07;
                         color: $principal_01;
                     }
+
+                    &:disabled{
+                        opacity: 0.5;
+                        cursor: no-drop;
+
+                        &:hover{
+                            background-color: $principal_01;
+                            color: $secundari_07;
+                        }
+                    }
                 }
             }
 
@@ -173,4 +188,13 @@
 
         
     }
+}
+
+
+.successful,
+.error{
+    color: $secundario_05;
+    text-align: right;
+    margin-top: 10px;
+    font-family: $font_principal;
 }

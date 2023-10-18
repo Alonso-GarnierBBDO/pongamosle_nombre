@@ -19,6 +19,7 @@ import UneteComponent from "@/components/page/unete";
 import EsfuerzoProyecto from "@/components/page/esfuerso";
 import ImageWord from "@/assets/img/home/word.svg";
 import FormComponent from "@/components/page/form";
+import FooterComponent from "@/components/static/footer";
 
 type modalContent = {
   active: boolean;
@@ -82,6 +83,7 @@ export default function Home() {
         <section className="sectionScroll">
           <FormComponent/>
         </section>
+        <FooterComponent/>
       </section>
       <section
         className={"modaEsfuerzo" + " " + (activeModal ? "active" : "")}
