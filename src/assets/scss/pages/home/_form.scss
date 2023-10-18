@@ -55,6 +55,7 @@
             height: 30%;
         
             @include bp(tablet){
+                height: auto;
                 display: flex;
                 flex-flow: column;
                 align-items: center;
@@ -74,10 +75,11 @@
 
                 @include bp(tablet){
                     width: 50%;
+                    height: auto;
                 }
 
                 @include bp(laptop){
-                    height: 60%;
+                    height: auto;
                     width: 60%;
                     margin-bottom: 0px;
                 }
@@ -194,7 +196,12 @@
 .successful,
 .error{
     color: $secundario_05;
-    text-align: right;
+    text-align: center;
     margin-top: 10px;
     font-family: $font_principal;
+
+    @include bp(tablet){
+        text-align: right;
+    }
+
 }

@@ -1,12 +1,15 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import Link from 'next/link'
-import { usePathname, useParams } from 'next/navigation'
+import { usePathname, useParams } from 'next/navigation';
+import ImagePhone from '@/assets/img/header/phone_modal.png';
+import ImageScroll from '@/assets/img/header/arrrow_scroll.png';
 
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Logo from '@/assets/img/header/logo.svg';
+import Image from "next/image";
 
 function Header() {
 
@@ -23,6 +26,15 @@ function Header() {
         setUrl(`${pathname}${hash}`);
 
     }, [params]);
+
+    const scrollear = () => {
+        const element = document.querySelector('.locomotive_scroll');
+        element?.scrollTo({
+            top: 100,
+            left: 0,
+            behavior: "smooth",
+        })
+    }
 
 
     // Animacion del menu
@@ -63,7 +75,7 @@ function Header() {
 
                 <section className={'item' + ' ' + (activeMenu ? 'active' : '') + ' ' + (removeMenu ? 'remove' : '')}>
                     <a href="#" className="logo" title="Inicio">
-                        <img src={Logo.src} alt="" />
+                        <Image src={Logo.src} alt="" width={200} height={200}/>
                     </a>
 
                     <section className="menu">
@@ -92,6 +104,17 @@ function Header() {
                 </section>
             
             </header>
+
+            <div className="modal_contact">
+                <a href="">
+                    <Image src={ImagePhone.src} alt="Telefono imagen" width={100} height={100}/>
+                    <p>Haz tus denuncias al 1572</p>
+                </a>
+                <button className="newScroll">
+                    <Image src={ImageScroll.src} alt="Imagen del arrow" width={100} height={100}/>
+                </button>
+            </div>
+
         </>
     )
 

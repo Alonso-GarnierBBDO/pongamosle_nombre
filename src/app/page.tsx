@@ -109,7 +109,7 @@ export default function Home() {
               </svg>
             </button>
             <section className="photo">
-              <Image src={image} width={400} height={400} alt="Photo" />
+              <img src={image} alt="Photo" width={400} height={400}  />
             </section>
             <section className="content_item">
               <section>

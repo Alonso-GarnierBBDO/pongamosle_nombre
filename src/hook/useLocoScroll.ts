@@ -10,17 +10,36 @@ const useLocoScroll = () => {
     import("locomotive-scroll").then((locomotiveModule) => {
         const container : HTMLElement | null = document.querySelector('.locomotive_scroll'); 
         const menssajesElements : NodeListOf<HTMLElement> = document.querySelectorAll('.mensajes_home .allContent');
+        const newScroll : HTMLButtonElement | null = document.querySelector('.newScroll');
 
-        if (container) {
+
+        if (container && newScroll ) {
             let locoScroll = new locomotiveModule.default({
                 el: container,
                 smooth: true,
                 getSpeed: true,
             });
 
-            let position = 0;
+
+            newScroll.onclick = () => {
+                locoScroll.scrollTo('#menssage_home');  
+            }
+
 
             locoScroll.on('scroll', (arg) => {
+
+                if(typeof arg.currentElements['inicio'] === 'object'){
+                    let progress = arg.currentElements['inicio'].progress;
+
+                    if(progress >= 0.8){
+                        newScroll.classList.add('remove');
+                    }else{
+                        newScroll.classList.remove('remove');
+                    }
+
+
+                }
+
                 if(typeof arg.currentElements['modal'] === 'object'){
 
                     let progress = arg.currentElements['modal'].progress;

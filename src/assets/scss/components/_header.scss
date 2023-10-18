@@ -254,3 +254,97 @@ header{
 
 
 }
+
+
+.modal_contact{
+    position: fixed;
+    bottom: 10px;
+    width: calc(100vw - 60px);
+    padding: 0px 25px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include bp(laptop){
+        bottom: 20px;       
+        pointer-events: none;
+    }
+
+    a{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        background-color: $principal_02;
+        border-radius: 25px;
+        transition: .2s ease;
+        overflow: hidden;
+        text-decoration: none;
+        color: $principal_03;
+        font-family: $font_principal;
+        pointer-events: initial;
+
+        &:hover{
+            width: 265px;
+            justify-content: flex-start;
+
+            img{
+                margin-left: 5px;
+            }
+
+            p{
+                display: block;
+            }
+        }
+
+        img{
+            width: 40px;
+            height: 40px;
+            transition: .2s ease;
+            margin-left: 5px;
+        }
+
+        p{
+            display: none;
+            margin: 0px 5px;
+            transition: .2s ease;
+            white-space: nowrap;
+        }
+
+    }
+
+    button{
+
+        height: 70px;
+        width: 40px;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 10px 0px;
+        border: none;
+        cursor: pointer;
+        border: 3px solid transparent;
+        transition: .5s ease;
+        pointer-events: initial;
+        opacity: 1;
+
+        &:hover{
+            border: 3px solid $principal_02;
+        }
+
+        img{
+            width: 20px;
+            height: auto;
+        }
+
+    }
+
+    button.remove{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}

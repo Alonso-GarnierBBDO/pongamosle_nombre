@@ -26,7 +26,7 @@ function InicioComponent(){
 
     return (
         <>
-            <section style={styles} className="inicio_home" data-scroll data-scroll-speed="0">
+            <section style={styles} className="inicio_home" data-scroll data-scroll-speed="0" data-scroll-id="inicio">
                 <div className="contenido">
                     <section className="item">
                         <img data-scroll data-scroll-speed="2" src={Logo.src} alt="Pongámosle nombre" title="Pongámosle nombre"/>

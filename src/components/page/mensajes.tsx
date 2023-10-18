@@ -48,7 +48,7 @@ const MensajesComponents =  () => {
     return (
         <>
 
-            <section  className="mensajes_home" data-scroll data-scroll-id="modal" data-scroll-speed="0">
+            <section  className="mensajes_home" id="menssage_home" data-scroll data-scroll-id="modal" data-scroll-speed="0">
                 <section className="container">
                     <div className="content">
                         {
