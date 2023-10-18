@@ -12,7 +12,8 @@
 
     @include bp(tablet){
         width: calc(100vw - 20px);        
-        margin-top: 40px;
+        margin-top: 0px;
+        padding-top: 0px;
     }
 
     @include bp(laptop){
@@ -33,11 +34,13 @@
 
         @include bp(tablet){
             margin: 25px 0px;
+            margin-top: 0px;
         }
 
         @include bp(laptop){
             font-size: rem(45px);
             max-width: 1000px;
+            margin: 25px 0px;
         }
 
         @include bp(escritorio){
@@ -213,7 +216,7 @@
                 cursor: pointer;
 
 
-                @include bp(tablet){
+                @include bp(laptop){
                     right: 15px;
                     top: 15px;
                 }
@@ -322,6 +325,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 25px;
+            text-decoration: none;
             transition: .2s ease;
 
             @include bp(laptop){

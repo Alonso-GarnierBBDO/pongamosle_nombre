@@ -18,6 +18,7 @@ import MotivcacionSegundaComponent from "@/components/page/motivacion_segunda";
 import UneteComponent from "@/components/page/unete";
 import EsfuerzoProyecto from "@/components/page/esfuerso";
 import ImageWord from "@/assets/img/home/word.svg";
+import FormComponent from "@/components/page/form";
 
 type modalContent = {
   active: boolean;
@@ -77,6 +78,9 @@ export default function Home() {
         </section>
         <section className="sectionScroll">
           <EsfuerzoProyecto onEvent={handleChildEvent} />
+        </section>
+        <section className="sectionScroll">
+          <FormComponent/>
         </section>
       </section>
       <section
