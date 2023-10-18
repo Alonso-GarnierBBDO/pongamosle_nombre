@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // Share bottons
 import {
@@ -110,7 +111,12 @@ function UneteComponent() {
   return (
     <>
       <section className="uneteComponent">
-        <section className="header_unete">
+        <motion.section 
+          className="header_unete"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring" }}
+        >
           <Image
             src={Megafono.src}
             title="Megafono ilustrativo"
@@ -126,8 +132,13 @@ function UneteComponent() {
               cosas por su nombre.
             </p>
           </section>
-        </section>
-        <section className="slider">
+        </motion.section>
+        <motion.section 
+          className="slider"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring" }}
+        >
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
@@ -223,39 +234,7 @@ function UneteComponent() {
                 })
             }
           </Swiper>
-        </section>
-        <section
-          className={"modal " + (viewModal ? "active" : "")}
-          onClick={modal}
-        >
-          <section className="content">
-            <section
-              className="sharedContent"
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-            >
-              <section className="header">
-                <h3>Compartir</h3>
-                <button onClick={modal}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    className="bi bi-x-lg"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                  </svg>
-                </button>
-              </section>
-              <section className="body">
-                <section className="groups"></section>
-              </section>
-            </section>
-          </section>
-        </section>
+        </motion.section>
       </section>
     </>
   );

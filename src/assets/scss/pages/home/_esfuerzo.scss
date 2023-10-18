@@ -1,0 +1,252 @@
+.esfuerzo_proyecto{
+
+    width: calc(100vw - 20px);
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+
+    @include bp(tablet){
+        width: calc(100vw - 20px);        
+        margin-top: 40px;
+    }
+
+    @include bp(laptop){
+        padding: 0px 50px;
+        width: calc(100vw - 100px);
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    h2{
+
+        font-size: rem(33px);
+        text-align: center;
+        font-family: $font_terciario;
+        color: $principal_02;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        @include bp(tablet){
+            margin: 25px 0px;
+        }
+
+        @include bp(laptop){
+            font-size: rem(45px);
+            max-width: 1000px;
+        }
+
+        @include bp(escritorio){
+            margin-bottom: 10px;
+        }
+
+    }
+
+    p{
+        text-align: center;
+        font-size: rem(15px);
+        font-family: $font_principal;
+        color: $principal_02;
+
+        @include bp(tablet){
+            font-size: rem(19px);
+            margin-bottom: 15px;
+        }
+
+        @include bp(laptop){
+            font-size: rem(20px);
+        }
+
+        @include bp(escritorio){
+            text-align: left;
+            font-size: rem(17px);
+        }
+    }
+
+    .imagenes{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, calc(33.33% - 10px));
+        justify-items: center;
+        align-items: center;
+        background-color: $principal_03;
+        width: calc(100% - 30px);
+        grid-gap: 15px;
+        padding: 15px;
+        border-radius: 15px;
+
+
+        @include bp(laptop){
+            grid-template-columns: repeat(5, calc(20% - 10px));
+            background-color: transparent;
+            grid-gap: 0px;
+            row-gap: 50px;
+        }
+
+        div{
+
+            width: 100%;
+            height: 100%;
+
+            button{
+                width: 100%;
+                height: 100%;
+                padding: 0px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            @include bp(laptop){
+                padding: 15px;
+                background-color: $principal_03;
+                width: calc(100% - 30px);
+
+                &:last-of-type{
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                }
+
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+
+        div.active-left{
+            @include bp(laptop){
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+        }
+
+        div.active-right{
+            @include bp(laptop){
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+
+    }
+
+}
+
+.modaEsfuerzo{
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    display: none;
+    opacity: 0;
+
+    @include keyframes(animationModal){
+                                
+        0%{
+            display: block;
+            opacity: 1;
+
+        }
+        5%{
+            display: block;
+            opacity: 1;
+        }
+
+        95%{
+            display: block;
+            opacity: 0;
+        }
+        100%{
+            display: none;
+            opacity: 0;
+        }
+
+      }
+    @include animate(animationModal, .4s, ease, 1);
+
+    .capa{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content{
+
+            background-color: $secundario_05;
+            width: 80%;
+            padding: 15px;
+            border-radius: 15px;
+            position: relative;
+
+            .close{
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                border: none;
+
+                svg{
+                    fill: $secundario_05;
+                    stroke: $secundario_05;
+                }
+
+            }
+
+            .photo{
+
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+                overflow: hidden;
+                cursor: pointer;
+                pointer-events: none;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+.modaEsfuerzo.active{
+    display: block;
+    opacity: 1;
+
+    @include keyframes(animationModalOpen){
+                                
+        0%{
+            display: none;
+            opacity: 0;
+
+        }
+        100%{
+            display: block;
+            opacity: 1;
+        }
+
+      }
+    @include animate(animationModalOpen, .4s, ease, 1);
+
+}
