@@ -17,7 +17,7 @@ function PonerleNombreComponent(){
 
     return (
         <>
-            <section className="ponerle_nombre">
+            <section className="ponerle_nombre" style={{contain: 'paint'}}>
                 <section className="content">
                     <motion.section 
                         className="no-existe"

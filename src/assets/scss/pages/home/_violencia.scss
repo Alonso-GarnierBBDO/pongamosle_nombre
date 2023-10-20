@@ -16,7 +16,7 @@
     }
 
     @include bp(laptop){
-        width: calc(100vw - 200px);
+        width: calc(100% - 200px);
         padding: 0px 100px;
         margin-top: 0px;
     }

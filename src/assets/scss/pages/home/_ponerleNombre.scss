@@ -4,6 +4,7 @@
     padding: 10px;
     margin-top: 40px;
     margin-bottom: 45px;
+    contain: paint;
 
     @include bp(tablet){
         width: calc(100vw - 38px);        
@@ -14,7 +15,7 @@
     @include bp(laptop){
         padding: 0px 50px;
         margin-bottom: 100px;
-        width: calc(100vw - 100px);
+        width: calc(100% - 100px);
     }
 
 

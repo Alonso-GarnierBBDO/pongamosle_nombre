@@ -17,7 +17,7 @@
 
     @include bp(laptop){
         padding: 0px 50px;
-        width: calc(100vw - 100px);
+        width: calc(100% - 100px);
         margin-top: 180px;
     }
 
@@ -83,7 +83,7 @@
 
     img{
         @include bp(tablet){
-            width: calc(100vw);
+            width: calc(100%);
         }
 
         @include bp(escritorio){
@@ -119,10 +119,11 @@
                 border-radius: 15px;
                 overflow: hidden;
                 position: relative;
+                height: 300px;
 
                 img{
-                    width: 80%;
-                    height: 80%;
+                    width: 45%;
+                    height: 45%;
                     object-fit: contain;
                 }
 
@@ -171,7 +172,7 @@
                 height: 10px;
                 z-index: 999;
                 position: relative;
-                margin-top: 10px;
+                margin-top: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;

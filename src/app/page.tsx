@@ -59,7 +59,7 @@ export default function Home() {
         <section className="sectionScroll">
           <InicioComponent />
         </section>
-        <section className="sectionScroll mensajes_main" data-scroll-section>
+        <section className="sectionScroll mensajes_main">
           <MensajesComponents />
         </section>
         <section className="sectionScroll">
@@ -68,19 +68,19 @@ export default function Home() {
         <section className="sectionScroll">
           <ComunidadComponent />
         </section>
-        <section className="sectionScroll" style={{overflowX: 'hidden'}}>
+        <section className="sectionScroll">
           <PonerleNombreComponent />
         </section>
         <section className="sectionScroll">
           <MotivcacionComponent />
         </section>
-        <section className="sectionScroll" style={{overflow: 'hidden'}}>
+        <section className="sectionScroll" style={{contain: 'paint'}}>
           <IniciativaComponent />
         </section>
-        <section className="sectionScroll" style={{overflow: 'hidden'}}>
+        <section className="sectionScroll">
           <CifrasComponent />
         </section>
-        <section className="sectionScroll" style={{overflow: 'hidden'}}>
+        <section className="sectionScroll" style={{contain: 'paint'}}>
           <VictimasComponent />
         </section>
         <section className="sectionScroll">
@@ -89,16 +89,17 @@ export default function Home() {
         <section className="sectionScroll">
           <UneteComponent />
         </section>
-        <section className="sectionScroll" id="organizaciones">
+        <section className="sectionScroll" id="organizaciones" style={{contain: 'paint'}}>
           <EsfuerzoProyecto onEvent={handleChildEvent} />
         </section>
-        <section className="sectionScroll">
+        <section className="sectionScroll" style={{contain: 'paint'}}>
           <FormComponent/>
         </section>
         <FooterComponent/>
       <section
         className={"modaEsfuerzo" + " " + (activeModal ? "active" : "")}
         onClick={closeModal}
+        style={{contain: 'paint'}}
       >
         <section className="capa">
           <section

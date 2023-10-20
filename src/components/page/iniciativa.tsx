@@ -26,7 +26,7 @@ function IniciativaComponent(){
 
     return(
         <>
-            <section className="normalSize lgtbi-section">
+            <section className="lgtbi-section scale_big">
                 <motion.section 
                     className="container" 
                     style={styleBackground}

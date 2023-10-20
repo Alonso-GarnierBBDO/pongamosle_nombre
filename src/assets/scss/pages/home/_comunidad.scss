@@ -2,6 +2,20 @@
 
     margin: 50px auto 0px auto;
 
+    width: calc(100vw - 0px);
+    padding: 10px 0px;
+
+    @include bp(tablet){
+        width: calc(100vw - 38px);        
+    }
+
+    @include bp(laptop){
+        width: calc(100% - 0px);
+        height: calc(100vh - 200px);
+        padding: 100px 0px;
+        contain: paint;
+    }
+
     @include bp(tablet){
         display: flex;
         align-items: center;
@@ -45,12 +59,14 @@
 
         background-color: $principal_02;
         margin: 25px auto;
-        padding: 15px 15px 0px 15px;
+        padding: 35px 15px 0px 15px;
         border-radius: 15px;
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden;
+
+        transform: scale(0.8);
 
         @include bp(tablet){
             display: grid;
@@ -71,6 +87,7 @@
             font-family: $font_secundario;
             font-size: rem(17px);
             color: $secundario_04;
+            margin-bottom: 20px;
 
             @include bp(tablet){
                 text-align: left;

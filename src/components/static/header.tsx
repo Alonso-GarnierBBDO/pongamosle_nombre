@@ -109,7 +109,7 @@ function Header() {
 
                 <section className={'item' + ' ' + (activeMenu ? 'active' : '') + ' ' + (removeMenu ? 'remove' : '')}>
                     <a href="#" className="logo" title="Inicio">
-                        <Image src={Logo.src} alt="" width={200} height={200}/>
+                        <Image src={Logo.src} alt="" width={200} height={200} priority/>
                     </a>
 
                     <section className="menu">

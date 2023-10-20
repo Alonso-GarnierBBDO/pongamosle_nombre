@@ -26,7 +26,7 @@ function ComunidadComponent(){
 
     return(
         <>
-            <section className="normalSize comunidad" >
+            <section className=" comunidad" >
                 <section className="contentViolencia">
                     <motion.p 
                         title='¿Cuántas veces has escuchado o repetido estas palabras, incluso sin darte cuenta de que en realidad disfrazan formas de violencia?'
@@ -35,11 +35,8 @@ function ComunidadComponent(){
                         transition={{ type: "spring" }}
                     >¿Cuántas veces has escuchado o repetido estas palabras, incluso sin darte cuenta de que en realidad disfrazan formas de violencia?</motion.p>
                 </section>
-                <motion.section 
-                    className='box'
-                    initial={{ y: 100, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ type: "spring" }}
+                <section 
+                    className='box scale_big'
                     style={styleBox}
                 >
                     <motion.p
@@ -48,7 +45,7 @@ function ComunidadComponent(){
                         transition={{ type: "spring" }}
                     >Estas frases a menudo se usan para ocultar y suavizar la violenta realidad que viven miles de mujeres y miembros de la comunidad LGBTIQ+ en Guatemala.</motion.p>
                     <Image src={LebianaImage.src} alt='Imagen de lesbiana' width={400} height={400}/>
-                </motion.section>
+                </section>
             </section>
         </>
     )

@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { motion } from 'framer-motion';
@@ -38,9 +39,34 @@ function MotivcacionComponent(){
         }
     ]
 
+
+    const [ removeTwo, setRemoveTwo ] = useState(false);
+    const elementTwo = useRef<HTMLElement | null>(null);
+
+    // useEffect( () => {
+    //     const tagElement : HTMLElement | null = elementTwo.current;
+
+    //     if(tagElement){
+
+    //         window.onscroll = () =>{
+
+    //             console.log(tagElement);
+
+    //             const rectTwo = tagElement.getBoundingClientRect();
+
+    //             if(rectTwo.bottom <= (rectTwo.height / 1.6)){
+    //                 setRemoveTwo(true);
+    //             }else{
+    //                 setRemoveTwo(false);
+    //             }
+
+    //         }
+    //     }
+    // },[])
+
     return(
         <>
-            <section className="motivaciones">
+            <section className={'motivaciones scroll' + " " + (removeTwo ? 'remove' : '')} ref={elementTwo}>
                 <section className='escritorio'>
                     <div className="item white">
                         <span>Si te niegan tu derecho a vivir libremente tu identidad de género.</span>

@@ -1,21 +1,19 @@
 .lgtbi-section{
 
-    width: calc(100vw - 21px);
-    padding: 10px;
-    transition: .5s ease;
-    margin-top: 30px;
+    width: calc(100vw - 0px);
+    padding: 10px 0px;
+    transform: scale(0.8);
 
     @include bp(tablet){
-        width: calc(100vw);        
-        margin-top: 10px;
+        width: calc(100vw - 38px);        
     }
 
     @include bp(laptop){
-        width: calc(100vw - 200px);
+        width: calc(100% - 0px);
         height: calc(100vh - 200px);
-        padding: 100px;
-        margin-top: 60px;
+        padding: 100px 0px;
     }
+
 
     .container{
 
@@ -28,9 +26,9 @@
         justify-content: center;
         align-items: center;
         flex-flow: column;
-        row-gap: 25px;
+        row-gap: 40px;
         position: relative;
-        padding: 20px 20px;
+        padding: 35px 20px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

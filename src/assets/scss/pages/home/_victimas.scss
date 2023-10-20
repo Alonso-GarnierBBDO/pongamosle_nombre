@@ -1,10 +1,11 @@
 .victimas_component{
 
-    width: calc(100vw - 21px);
-    padding: 10px;
+    width: calc(100vw - 0px);
+    padding: 10px 0px;
     transition: .5s ease;
     margin-top: 10px;
     margin-bottom: 50px;
+    transform: scale(0.8);
 
     @include bp(tablet){
         width: calc(100vw - 20px);        
@@ -13,9 +14,9 @@
     }
 
     @include bp(laptop){
-        width: calc(100vw - 200px);
+        width: calc(100% - 0px);
         height: calc(100vh - 200px);
-        padding: 100px;
+        padding: 100px 0px;
     }
 
     .content{
@@ -30,7 +31,7 @@
         align-items: center;
         flex-flow: column;
         position: relative;
-        padding: 20px 20px;
+        padding: 40px 20px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

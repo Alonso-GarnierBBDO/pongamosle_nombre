@@ -17,7 +17,7 @@
 
     @include bp(laptop){
         padding: 0px 50px;
-        width: calc(100vw - 100px);
+        width: calc(100% - 100px);
         margin-top: 100px;
     }
 
@@ -37,7 +37,7 @@
 
                 &:nth-of-type(1){
                     top: 20%;
-                    transform: translateX(-30%);
+                    transform: translateX(-30%) translateY(0%);
                 }
 
                 &:nth-of-type(2){
@@ -48,30 +48,30 @@
 
                 &:nth-of-type(3){
                     top: 36%;
-                    transform: translateX(-70%);
+                    transform: translateX(-70%) translateY(0%);
                 }
 
                 &:nth-of-type(4){
                     top: 45%;
-                    transform: translateX(100%);
+                    transform: translateX(100%) translateY(0%);
                     background-color: $secundario_03;
                 }
 
                 &:nth-of-type(5){
                     top: 50%;
-                    transform: translateX(-10%);
+                    transform: translateX(-10%) translateY(0%);
                     background-color: $secundario_03;
                 }
 
                 &:nth-of-type(6){
                     top: 40%;
-                    transform: translateX(-100%);
+                    transform: translateX(-100%) translateY(0%);
                     background-color: $principal_02;
                 }
 
                 &:nth-of-type(7){
                     top: 40%;
-                    transform: translateX(60%);
+                    transform: translateX(60%) translateY(0%);
                     background-color: $principal_02;
                 }
             }
@@ -251,4 +251,51 @@
 
     }
 
+}
+
+.motivaciones.remove{
+    .escritorio{
+        .item{
+
+            &:nth-of-type(1){
+                
+                transform: translateX(-30%) translateY(-300%);
+            }
+
+            &:nth-of-type(2){
+            
+                transform: translateX(40%) translateY(-290%);
+            
+            }
+
+            &:nth-of-type(3){
+                
+                transform: translateX(-70%) translateY(-290%);
+            }
+
+            &:nth-of-type(4){
+                
+                transform: translateX(100%) translateY(-270%);
+                
+            }
+
+            &:nth-of-type(5){
+                
+                transform: translateX(-10%) translateY(-220%);
+                
+            }
+
+            &:nth-of-type(6){
+                
+                transform: translateX(-100%) translateY(-150%);
+                
+            }
+
+            &:nth-of-type(7){
+                
+                transform: translateX(60%) translateY(-100%);
+                
+            }
+        }
+    }
 }

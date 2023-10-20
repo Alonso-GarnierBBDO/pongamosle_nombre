@@ -6,21 +6,36 @@ const useLocoScroll = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const element : NodeListOf<HTMLElement> | null = document.querySelectorAll('.mensajes_home .container');
-
+    const element : NodeListOf<HTMLElement> | null = document.querySelectorAll('.scale_big');
+    
     if(element){
-        element.forEach( ( item, key ) => {
-            gsap.to(item, {
-                scrollTrigger: {
-                    trigger: item,
-                    markers: false,
-                    start: "top bottom",
-                    end: "+=650",
-                    scrub: true,
-                  },
-                  ease: "none",
-                  scale: 1,
-            });
+        element.forEach( ( item) => {
+
+            if(window.innerWidth > 700){
+                gsap.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        markers: false,
+                        start: "top top",
+                        end: "+=850",
+                        scrub: true,
+                      },
+                      ease: "none",
+                      scale: 1,
+                });
+            }else{
+                gsap.to(item, {
+                    scrollTrigger: {
+                        trigger: item,
+                        markers: false,
+                        start: "top top",
+                        end: "+=650",
+                        scrub: true,
+                      },
+                      ease: "none",
+                      scale: 1,
+                });
+            }
 
 
 
@@ -38,6 +53,23 @@ const useLocoScroll = () => {
             //     });
 
         });
+    }
+
+    window.onscroll = () => {
+        const elementScroll : NodeListOf<HTMLElement> = document.querySelectorAll('.scroll');
+
+        if(elementScroll){
+            elementScroll.forEach( e => {
+                const rectElement = e.getBoundingClientRect();
+
+                if(rectElement.bottom <= (rectElement.height / 1.6)){
+                    e.classList.add('remove');
+                }else{
+                    e.classList.remove('remove');
+                }
+            });
+        }
+
     }
 
 

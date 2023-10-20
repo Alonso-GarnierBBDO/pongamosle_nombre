@@ -21,7 +21,7 @@ function VictimasComponent(){
 
     return (
         <>  
-            <section className="victimas_component">
+            <section className="victimas_component scale_big">
                 <motion.section 
                     className="content" 
                     style={styleContent}

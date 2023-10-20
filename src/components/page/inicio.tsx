@@ -4,7 +4,7 @@ import Logo from '@/assets/img/header/logo.svg';
 import Background from '@/assets/img/home/backgroud_home.svg';
 import Personas from '@/assets/img/home/personas.svg';
 import { motion } from "framer-motion"
-
+import Image from 'next/image';
 
 
 function InicioComponent(){
@@ -29,7 +29,7 @@ function InicioComponent(){
             <section style={styles} className="inicio_home" data-scroll data-scroll-speed="0" data-scroll-id="inicio">
                 <div className="contenido">
                     <section className="item">
-                        <img data-scroll data-scroll-speed="2" src={Logo.src} alt="Pongámosle nombre" title="Pongámosle nombre"/>
+                        <Image src={Logo.src} alt="Pongámosle nombre" title="Pongámosle nombre" width={100} height={100} priority/>
                     </section>
                     <section className="item">
                         <motion.div

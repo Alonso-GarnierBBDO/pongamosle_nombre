@@ -1,3 +1,6 @@
+'use client';
+import { useEffect, useState, useRef } from "react";
+
 const MensajesComponents =  () => {
 
     const menssages =  [
@@ -45,11 +48,35 @@ const MensajesComponents =  () => {
 
     ]
 
+    const [ remove, setRemove ] = useState(false);
+    const [ removeTwo, setRemoveTwo ] = useState(false);
+    const element = useRef<HTMLElement | null>(null);
+
+    // useEffect( () => {
+    //     const tagElement : HTMLElement | null = element.current;
+    //     if(tagElement){
+
+    //         window.onscroll = () =>{
+    //             const rect = tagElement.getBoundingClientRect();
+
+    //             if(rect.bottom <= (rect.height / 1.6)){
+    //                 setRemove(true);
+    //             }else if(rect.bottom <= (rect.height / 1.9)){
+    //                 setRemoveTwo(true);
+    //             }else{
+    //                 setRemove(false);
+    //                 setRemoveTwo(false);
+    //             }
+
+    //         }
+    //     }
+    // },[])
+
     return (
         <>
 
-            <section  className="mensajes_home" id="menssage_home" data-scroll data-scroll-id="modal" data-scroll-speed="0">
-                <section className="container" data-scroll-sticky>
+            <section  className={"mensajes_home scroll" + " " + (remove ? 'remove' : '') + " " + (removeTwo ? 'removeTwo' : '')} id="menssage_home" ref={element}>
+                <section className="container scale_big">
                     <div className="content">
                         {
                             menssages.map( (item, key) => {

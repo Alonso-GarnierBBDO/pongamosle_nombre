@@ -7,7 +7,6 @@ import { createClient } from '@supabase/supabase-js';
 
 function FormComponent(){
 
-
     // Registramos supabase
     const supabaseUrl = 'https://physykgkvkzglwyfwhwa.supabase.co'
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBoeXN5a2drdmt6Z2x3eWZ3aHdhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NzY1MDQ0NywiZXhwIjoyMDEzMjI2NDQ3fQ.S43U3Gcq-CgBQ62iHKgOFAT2hOUmItuIEoQbVGrMFAs';
@@ -81,11 +80,11 @@ function FormComponent(){
 
     return (
         <>
-            <section className="form" id="contacto">
+            <section className="form scale_big" id="contacto">
                 <section className="container">
 
                     <section className="logo">
-                        <Image src={Logo.src} width={200} height={100} alt="Logo"/>
+                        <Image src={Logo.src} width={200} height={100} alt="Logo" priority/>
                         <p>Si te gustaría conocer más de esta iniciativa, apoyar o conectar con los colectivos organizadores, deja tu información aquí:</p>
                     </section>
                     <section className="formItem">

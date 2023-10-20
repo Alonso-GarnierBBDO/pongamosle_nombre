@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import 'swiper/css';
+import { useEffect, useState, useRef } from "react";
 // import 'swiper/css/navigation';
 
 function MotivcacionSegundaComponent(){
@@ -26,9 +27,29 @@ function MotivcacionSegundaComponent(){
         }
     ]
 
+    const [ removeTree, setRemoveTree ] = useState(false);
+    const elementTree = useRef<HTMLElement | null>(null);
+
+    // useEffect( () => {
+    //     const tagElement : HTMLElement | null = elementTree.current;
+    //     if(tagElement){
+
+    //         window.onscroll = () =>{
+    //             const rectThree = tagElement.getBoundingClientRect();
+
+    //             if(rectThree.bottom <= (rectThree.height / 1.6)){
+    //                 setRemoveTree(true);
+    //             }else{
+    //                 setRemoveTree(false);
+    //             }
+
+    //         }
+    //     }
+    // },[])
+
     return(
         <>
-            <section className="motivaciones_two" id="tipos">
+            <section className={"motivaciones_two scroll" + " " + (removeTree ? 'remove' : '')} ref={elementTree} id="tipos">
                 <section className='escritorio'>
                     <div className="item white">
                         <span>Luchamos por concientizar acerca de las violencias que sufren las mujeres con discapacidad, incluyendo el acoso, abuso sexual y esterilizaciones forzadas.</span>
@@ -70,7 +91,7 @@ function MotivcacionSegundaComponent(){
                                     <SwiperSlide className='slider-item' key={key}>
                                         <section>
                                             <span>{ e.context }</span>
-                                            <strong>{ e.title }</strong>
+                                            <strong  dangerouslySetInnerHTML={{__html: e.title}} ></strong>
                                         </section>
                                     </SwiperSlide>
                                 );
