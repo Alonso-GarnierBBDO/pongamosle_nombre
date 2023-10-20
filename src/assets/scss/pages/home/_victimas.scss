@@ -4,10 +4,12 @@
     padding: 10px;
     transition: .5s ease;
     margin-top: 10px;
+    margin-bottom: 50px;
 
     @include bp(tablet){
         width: calc(100vw - 20px);        
         margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     @include bp(laptop){

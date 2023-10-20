@@ -81,7 +81,7 @@ function FormComponent(){
 
     return (
         <>
-            <section className="form">
+            <section className="form" id="contacto">
                 <section className="container">
 
                     <section className="logo">
@@ -109,10 +109,15 @@ function FormComponent(){
                                 }} 
                             placeholder="Correo electrónico" required/>
                             <section className="two_medium">
-                                <input type="number" value={phone} disabled={sendingEmail} onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                    const value = e.target.value;
-                                    setPhone(value);
-                                }}  placeholder="Teléfono" required/>
+                                <section className="phone_country">
+                                    <div>
+                                        +502
+                                    </div>
+                                    <input type="text" value={phone} disabled={sendingEmail} onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                        const value = e.target.value;
+                                        setPhone(value);
+                                    }}  placeholder="Teléfono" required/>
+                                </section>
                                 <input type="number" value={edad} disabled={sendingEmail} onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
                                     const value = e.target.value;
                                     setEdad(value);

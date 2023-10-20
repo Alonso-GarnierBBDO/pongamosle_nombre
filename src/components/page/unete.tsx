@@ -1,4 +1,4 @@
-import ImageTest from "@/assets/img/home/imageTest.jpg";
+import ImageTest from "@/assets/img/home/person_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -110,7 +110,7 @@ function UneteComponent() {
 
   return (
     <>
-      <section className="uneteComponent">
+      <section className="uneteComponent" id="comparte">
         <motion.section 
           className="header_unete"
           initial={{ y: 100, opacity: 0 }}

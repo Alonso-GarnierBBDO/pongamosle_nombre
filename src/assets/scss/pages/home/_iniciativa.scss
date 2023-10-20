@@ -3,16 +3,18 @@
     width: calc(100vw - 21px);
     padding: 10px;
     transition: .5s ease;
-    margin-top: 10px;
+    margin-top: 30px;
 
     @include bp(tablet){
         width: calc(100vw);        
+        margin-top: 10px;
     }
 
     @include bp(laptop){
         width: calc(100vw - 200px);
         height: calc(100vh - 200px);
         padding: 100px;
+        margin-top: 60px;
     }
 
     .container{
@@ -121,6 +123,7 @@
                 text-align: center;
                 font-size: rem(17px);
                 color: $principal_03;
+                font-family: $font_principal;
 
                 @include bp(tablet){
                     font-size: rem(20px);

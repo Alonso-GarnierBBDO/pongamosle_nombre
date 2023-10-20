@@ -31,7 +31,7 @@ function CifrasComponent(){
 
     return (
         <>
-            <section className="cifras_components">
+            <section className="cifras_components" id='cifras'>
                 <motion.section 
                     className="options"
                     initial={{ y: 100, opacity: 0 }}
@@ -72,7 +72,7 @@ function CifrasComponent(){
                         transition={{ type: "spring" }} 
                     >
                         <span>23</span>
-                        <p>Niñas y adolescentes son abusada sexualmente todos los días</p>
+                        <p>Niñas y adolescentes son abusadas sexualmente todos los días</p>
                     </motion.section>
                     <motion.section 
                         className='item'

@@ -24,6 +24,10 @@ import FooterComponent from "@/components/static/footer";
 type modalContent = {
   active: boolean;
   image: string;
+  quienes: string,
+  proposito: string,
+  campana: string, 
+  link: string
 };
 
 export default function Home() {
@@ -31,10 +35,18 @@ export default function Home() {
 
   const [activeModal, setActiveModal] = useState(false);
   const [image, setImage] = useState("");
+  const [quienes, setQuienes] = useState("");
+  const [proposito, setProposito] = useState("");
+  const [campana, setCampana] = useState("");
+  const [link, setLink] = useState("");
 
   const handleChildEvent = (eventData: modalContent) => {
     setActiveModal(eventData.active);
     setImage(eventData.image);
+    setQuienes(eventData.quienes);
+    setProposito(eventData.proposito);
+    setCampana(eventData.campana);
+    setLink(eventData.link);
   };
 
   const closeModal = () => {
@@ -43,11 +55,11 @@ export default function Home() {
 
   return (
     <>
-      <section className="locomotive_scroll">
+
         <section className="sectionScroll">
           <InicioComponent />
         </section>
-        <section className="sectionScroll mensajes_main">
+        <section className="sectionScroll mensajes_main" data-scroll-section>
           <MensajesComponents />
         </section>
         <section className="sectionScroll">
@@ -56,19 +68,19 @@ export default function Home() {
         <section className="sectionScroll">
           <ComunidadComponent />
         </section>
-        <section className="sectionScroll">
+        <section className="sectionScroll" style={{overflowX: 'hidden'}}>
           <PonerleNombreComponent />
         </section>
         <section className="sectionScroll">
           <MotivcacionComponent />
         </section>
-        <section className="sectionScroll">
+        <section className="sectionScroll" style={{overflow: 'hidden'}}>
           <IniciativaComponent />
         </section>
-        <section className="sectionScroll">
+        <section className="sectionScroll" style={{overflow: 'hidden'}}>
           <CifrasComponent />
         </section>
-        <section className="sectionScroll">
+        <section className="sectionScroll" style={{overflow: 'hidden'}}>
           <VictimasComponent />
         </section>
         <section className="sectionScroll">
@@ -77,14 +89,13 @@ export default function Home() {
         <section className="sectionScroll">
           <UneteComponent />
         </section>
-        <section className="sectionScroll">
+        <section className="sectionScroll" id="organizaciones">
           <EsfuerzoProyecto onEvent={handleChildEvent} />
         </section>
         <section className="sectionScroll">
           <FormComponent/>
         </section>
         <FooterComponent/>
-      </section>
       <section
         className={"modaEsfuerzo" + " " + (activeModal ? "active" : "")}
         onClick={closeModal}
@@ -113,32 +124,45 @@ export default function Home() {
             </section>
             <section className="content_item">
               <section>
-                <h4>¿quiénes son?</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-                </p>
-              </section>
-              <section>
-                <h4>¿cúal es su propósito?</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </section>
-              <section>
-                <h4>¿Por qué apoyan la campaña?</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </section>
-              <section className="actions">
+
+              {
+
+                quienes.length > 0 && 
+
                 <div>
-                  <img src={ImageWord.src} alt="Imagen del enlace" />
+                  <h4>¿quiénes son?</h4>
+                  <p> { quienes } </p>
                 </div>
-                <a href="@">conoce más</a>
+
+              }
               </section>
+              <section>
+                {
+                  proposito.length > 0 &&
+                  <div>
+                    <h4>¿cúal es su propósito?</h4>
+                    <p>{ proposito }</p>
+                  </div>
+                }
+              </section>
+              <section>
+                {
+                  campana.length > 0 &&
+                  <div>
+                    <h4>¿Por qué apoyan la campaña?</h4>
+                    <p>{ campana }</p>
+                  </div>
+                }
+              </section>
+             {
+              link.length > 0 && 
+                <section className="actions">
+                  <div>
+                    <img src={ImageWord.src} alt="Imagen del enlace" />
+                  </div>
+                  <a href={link} target="_black" >conoce más</a>
+                </section>
+             }
             </section>
           </section>
         </section>

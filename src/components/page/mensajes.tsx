@@ -49,7 +49,7 @@ const MensajesComponents =  () => {
         <>
 
             <section  className="mensajes_home" id="menssage_home" data-scroll data-scroll-id="modal" data-scroll-speed="0">
-                <section className="container">
+                <section className="container" data-scroll-sticky>
                     <div className="content">
                         {
                             menssages.map( (item, key) => {
@@ -66,7 +66,7 @@ const MensajesComponents =  () => {
                                 if(key % 2 == 0){
                                     return (
                                     
-                                        <div className="allContent" key={key} data-scroll data-scroll-speed="2">
+                                        <div className="allContent big" key={key}>
                                             <div className="item" style={style}>
                                                 <p>{item.content}</p>
                                                 <span className="arrow" style={styleArrow}></span>
@@ -76,7 +76,7 @@ const MensajesComponents =  () => {
                                 }else if(key % 3 === 0){
                                     return (
                                     
-                                        <div className="allContent" key={key} data-scroll data-scroll-speed="1.5">
+                                        <div className="allContent medium" key={key}>
                                             <div className="item" style={style}>
                                                 <p>{item.content}</p>
                                                 <span className="arrow" style={styleArrow}></span>
@@ -86,7 +86,7 @@ const MensajesComponents =  () => {
                                 }else{
                                     return (
                                     
-                                        <div className="allContent" key={key} data-scroll data-scroll-speed="1">
+                                        <div className="allContent small" key={key}>
                                             <div className="item" style={style}>
                                                 <p>{item.content}</p>
                                                 <span className="arrow" style={styleArrow}></span>

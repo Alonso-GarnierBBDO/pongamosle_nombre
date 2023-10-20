@@ -25,6 +25,13 @@
         p{
             overflow: hidden;
             font-size: rem(17px);
+            margin-top: 30px;
+            margin-bottom: 80px;
+
+            @include bp(tablet){
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
 
             .letter{
                 display: inline-block;

@@ -25,12 +25,46 @@ function Header() {
         const hash = window.location.hash;
         setUrl(`${pathname}${hash}`);
 
+         const handleScroll = () => {
+            const scrollItem = document.querySelector('.newScroll');
+
+            if (scrollItem) {
+                if (window.scrollY <= window.innerHeight) {
+                    scrollItem.classList.remove('remove');
+                } else {
+                    scrollItem.classList.add('remove');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            // Clean up the event listener when the component unmounts.
+            window.removeEventListener('scroll', handleScroll);
+        };
+
     }, [params]);
 
+    // window.onscroll = ( e : Event) => {
+    //     const scrollItem : HTMLElement | null = document.querySelector('.newScroll');
+
+    //     if(scrollItem){
+    //         if(window.scrollY <= window.innerHeight){
+    //             scrollItem.classList.remove('remove');
+    //         }else{
+    //             scrollItem.classList.add('remove');
+    //         }
+    //     }
+
+    // }
+
     const scrollear = () => {
-        const element = document.querySelector('.locomotive_scroll');
-        element?.scrollTo({
-            top: 100,
+
+        const windowHeight = window.innerHeight;
+
+        window.scrollTo({
+            top: windowHeight,
             left: 0,
             behavior: "smooth",
         })
@@ -110,7 +144,7 @@ function Header() {
                     <Image src={ImagePhone.src} alt="Telefono imagen" width={100} height={100}/>
                     <p>Haz tus denuncias al 1572</p>
                 </a>
-                <button className="newScroll">
+                <button className="newScroll" onClick={scrollear}>
                     <Image src={ImageScroll.src} alt="Imagen del arrow" width={100} height={100}/>
                 </button>
             </div>

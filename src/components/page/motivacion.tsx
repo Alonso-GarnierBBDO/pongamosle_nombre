@@ -40,43 +40,37 @@ function MotivcacionComponent(){
 
     return(
         <>
-            <section className="motivaciones" data-scroll data-scroll-id="motivaciones">
+            <section className="motivaciones">
                 <section className='escritorio'>
-                    <section className="two">
-                        <div className="item white">
-                            <span>Si te niegan tu derecho a vivir libremente tu identidad de género.</span>
-                            <strong>NO ES OPINIÓN, ES VIOLENCIA</strong>
-                        </div>
-                        <div className="item white">
-                            <span>Cuando te niegan una educación sexual integral.</span>
-                            <strong>NO ES PRUDENCIA, ES VIOLENCISIA</strong>
-                        </div>
-                    </section>
-                    <section className="three">
-                        <div className="item dark">
-                            <span>Cuando te niegan una educación sexual integral.</span>
-                            <strong>NO ES PRUDENCIA, ES VIOLENCIA</strong>
-                        </div>
-                        <div className="item dark">
-                            <span>Cuando te niegan atención médica digna.</span>
-                            <strong>NO ES EL ‘SISTEMA’ ES VIOLENCIA</strong>
-                        </div>
-                        <div className="item dark">
-                            <span>Si te exigen una prueba de un embarazo en un trabajo.</span>
-                            <strong>NO ES REQUISITO, ES VIOLENCIA</strong>
-                        </div>
-                    </section>
-                    <section className="two">
-                        <div className="item white">
-                            <span>Si te obliga a tener relaciones sexuales aunque tu no quieras.</span>
-                            <strong>NO ES EL ‘SISTEMA’ ES VIOLENCIA</strong>
-                        </div>
-                        <div className="item white">
-                            <span>Cuando te cela y se pone agresivo contigo.</span>
-                            <strong>NO ES AMOR, ES VIOLENCIA</strong>
-                        </div>
-                    </section>
-                </section>
+                    <div className="item white">
+                        <span>Si te niegan tu derecho a vivir libremente tu identidad de género.</span>
+                        <strong>NO ES OPINIÓN, <br/> ES VIOLENCIA</strong>
+                    </div>
+                    <div className="item white">
+                        <span>Cuando te niegan una educación sexual integral.</span>
+                        <strong>NO ES PRUDENCIA, <br/> ES VIOLENCISIA</strong>
+                    </div>
+                    <div className="item dark">
+                        <span>Cuando te niegan una educación sexual integral.</span>
+                        <strong>NO ES PRUDENCIA, <br/> ES VIOLENCIA</strong>
+                    </div>
+                    <div className="item dark">
+                        <span>Cuando te niegan atención médica digna.</span>
+                        <strong>NO ES EL ‘SISTEMA’ ES VIOLENCIA</strong>
+                    </div>
+                    <div className="item dark">
+                        <span>Si te exigen una prueba de un embarazo en un trabajo.</span>
+                        <strong>NO ES REQUISITO, <br/> ES VIOLENCIA</strong>
+                    </div>
+                    <div className="item white">
+                        <span>Si te obliga a tener relaciones sexuales aunque tu no quieras.</span>
+                        <strong>NO ES EL ‘SISTEMA’ ES VIOLENCIA</strong>
+                    </div>
+                    <div className="item white">
+                        <span>Cuando te cela y se pone agresivo contigo.</span>
+                        <strong>NO ES AMOR, <br/> ES VIOLENCIA</strong>
+                    </div>
+            </section>
                 <motion.section 
                     className='mobile slider'
                     initial={{ y: 100, opacity: 0 }}
