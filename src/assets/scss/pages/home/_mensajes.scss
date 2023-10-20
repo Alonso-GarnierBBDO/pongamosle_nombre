@@ -102,7 +102,7 @@
                 &:nth-of-type(3){
                     top: 25%;
                     .item{
-                        transform: translateX(23%);
+                        transform: translateX(10%);
                     }
 
                     @include bp(tablet){

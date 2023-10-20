@@ -111,7 +111,7 @@
 
             input,
             textarea{
-                width: calc(100% - 15px);
+                width: calc(100% - 20px);
                 background-color: $secundari_07;
                 border: none;
                 padding: 15px 10px;
@@ -128,6 +128,10 @@
                 &:disabled{
                     opacity: 0.5;
                     cursor: no-drop;
+                }
+
+                @include bp(tablet){
+                    width: calc(100% - 15px);
                 }
 
             }
@@ -147,15 +151,21 @@
 
             .two_medium{
                 display: grid;
-                grid-template-columns: repeat(2, calc(50% - 5px));
-                grid-gap: 10px;
+                grid-template-columns: repeat(1, calc(100% - 0px));
+                grid-gap: 5px;
                 margin: 5px 0px;
+
+                @include bp(tablet){
+                    grid-template-columns: repeat(2, calc(50% - 5px));
+                    margin: 5px 0px;
+                    grid-gap: 10px;
+                }
 
                 .phone_country{
                     display: flex;
                     flex-flow: row;
                     align-items: center;
-                    column-gap: 5px;
+                    column-gap: 5px; 
 
                     div{
                         background-color: $secundari_07;
