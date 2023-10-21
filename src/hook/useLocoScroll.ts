@@ -23,18 +23,6 @@ const useLocoScroll = () => {
                       ease: "none",
                       scale: 1,
                 });
-            }else{
-                gsap.to(item, {
-                    scrollTrigger: {
-                        trigger: item,
-                        markers: false,
-                        start: "top top",
-                        end: "+=0",
-                        scrub: true,
-                      },
-                      ease: "none",
-                      scale: 1,
-                });
             }
 
 
@@ -68,6 +56,24 @@ const useLocoScroll = () => {
                     e.classList.remove('remove');
                 }
             });
+        }
+
+        if(window.innerWidth <= 700){
+            element.forEach( ( item) => {
+
+                const rectScroll = item.getBoundingClientRect();
+
+                if(rectScroll){
+                    item.style.transition = '.6s ease';
+                    if(rectScroll.top <= (rectScroll.height / 1.2)){
+                        item.style.transform = 'scale(1)';
+                    }else{
+                        item.style.transform = 'scale(0.8)';
+                    }
+
+                }
+
+            })
         }
 
     }
