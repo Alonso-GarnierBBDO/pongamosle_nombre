@@ -1,18 +1,19 @@
 .comunidad{
 
-    margin: 50px auto 0px auto;
+    margin: 70px auto 0px auto;
 
     width: calc(100vw - 0px);
-    padding: 10px 0px;
+    padding: 0px 0px;
 
     @include bp(tablet){
         width: calc(100vw - 38px);        
+        padding: 10px 0px;
     }
 
     @include bp(laptop){
         width: calc(100% - 0px);
         height: calc(100vh - 200px);
-        padding: 100px 0px;
+        padding: 80px 0px;
         contain: paint;
     }
 
@@ -39,8 +40,8 @@
         p{
             overflow: hidden;
             font-size: rem(17px);
-            margin-top: 30px;
-            margin-bottom: 80px;
+            // margin-top: 30px;
+            margin-bottom: 70px;
 
             @include bp(tablet){
                 margin-top: 0px;
@@ -58,7 +59,7 @@
     .box{
 
         background-color: $principal_02;
-        margin: 25px auto;
+        margin: 0px auto;
         padding: 35px 15px 0px 15px;
         border-radius: 15px;
         background-size: 100%;

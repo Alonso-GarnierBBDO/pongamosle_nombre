@@ -1,10 +1,10 @@
 .cifras_components{
 
     width: calc(100vw - 21px);
-    padding: 10px;
+    padding: 0px 10px;
     transition: .5s ease;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 
     @include bp(tablet){
         width: calc(100vw - 20px);        
@@ -28,13 +28,13 @@
         width: calc(100% - 40px);
         display: grid;
         grid-template-columns: repeat(1, 100%);
-        padding: 35px 20px;
+        padding: 30px 20px;
         justify-content: center;
         align-content: center;
         justify-items: center;
         row-gap: 30px;
         column-gap: 10px;
-        margin-top: 25px;
+        margin-top: 0px;
 
         @include bp(tablet){
             width: calc(100% - 40px);
@@ -92,8 +92,8 @@
     .title{
         display: flex;
         justify-content: center;
-        margin-top: 55px;
-        margin-bottom: 55px;
+        margin-top: 70px;
+        margin-bottom: 70px;
         color: $principal_02;
         font-family: $font_terciario;
         font-size: rem(36px);
@@ -127,7 +127,7 @@
         .item{
 
             border: 1px solid $principal_03;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             padding: 25px 15px;
             border-radius: 15px;
             text-align: center;
@@ -135,8 +135,13 @@
             flex-flow: column;
             justify-content: center;
 
+            &:last-of-type{
+                margin-bottom: 0px;
+            }
+
             @include bp(laptop){
                 padding: 35px 25px;
+                margin-bottom: 0px;
             }
 
             span{

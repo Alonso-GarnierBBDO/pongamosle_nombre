@@ -2,13 +2,13 @@
 
     width: calc(100vw - 20px);
     height: auto;
-    padding: 10px;
+    padding: 0px 10px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 60px;
+    margin-top: 0px;
 
     @include bp(tablet){
         width: calc(100vw - 20px);        
@@ -19,8 +19,8 @@
     @include bp(laptop){
         padding: 0px 50px;
         width: calc(100% - 100px);
-        margin-top: 100px;
-        margin-bottom: 30px;
+        margin-top: 80px;
+        margin-bottom: 0px;
     }
 
     h2{

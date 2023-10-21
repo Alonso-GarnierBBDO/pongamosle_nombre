@@ -4,9 +4,11 @@
     // height: calc(100vh - 20px);
     padding: 0px;
     transition: .5s ease;
+    margin-top: 70px;
 
     @include bp(tablet){
         width: calc(100vw - 38px);        
+        margin-top: 0px;
     }
 
     @include bp(laptop){
@@ -15,7 +17,7 @@
         height: auto;
         // padding: 100px 100px;
         padding: 0px;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
 
     .container{

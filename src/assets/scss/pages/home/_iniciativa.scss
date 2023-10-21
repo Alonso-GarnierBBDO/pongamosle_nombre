@@ -1,8 +1,10 @@
 .lgtbi-section{
 
     width: calc(100vw - 0px);
-    padding: 10px 0px;
+    padding: 0px 0px;
     transform: scale(0.8);
+    margin-top: 70px;
+    margin-bottom: 70px;
 
     @include bp(tablet){
         width: calc(100vw - 38px);        
@@ -11,7 +13,9 @@
     @include bp(laptop){
         width: calc(100% - 0px);
         height: calc(100vh - 200px);
-        padding: 100px 0px;
+        padding: 80px 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
 
