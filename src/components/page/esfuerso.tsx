@@ -115,11 +115,8 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
 
     return (
         <>
-            <motion.section 
+            <section 
                 className="esfuerzo_proyecto"
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring" }} 
             >
                 <h2>este proyecto nace del esfuerzo y la unión de los siguientes colectivos:</h2>
                 <p>Conócelos más</p>
@@ -139,7 +136,7 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
                         })
                     }
                 </section>
-            </motion.section>
+            </section>
         </>
     )
 
