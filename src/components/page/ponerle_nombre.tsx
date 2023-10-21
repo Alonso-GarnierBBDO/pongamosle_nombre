@@ -19,14 +19,10 @@ function PonerleNombreComponent(){
         <>
             <section className="ponerle_nombre" style={{contain: 'paint'}}>
                 <section className="content">
-                    <motion.section 
-                        className="no-existe"
-                        initial={{ y: 100, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ type: "spring" }}
-                    >
+                    <section 
+                        className="no-existe">
                         <h2>Lo que no se nombra, no existe</h2>
-                    </motion.section>
+                    </section>
                     <section ref={chat} className="content_chat">
                         <section className="ponerle-nombre">
                             <p>Hay que ponerle nombre, rostro y alto a la violencia</p>

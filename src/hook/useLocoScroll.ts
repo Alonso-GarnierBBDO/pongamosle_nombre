@@ -17,7 +17,7 @@ const useLocoScroll = () => {
                         trigger: item,
                         markers: false,
                         start: "top top",
-                        end: "+=850",
+                        end: "+=650",
                         scrub: true,
                       },
                       ease: "none",
