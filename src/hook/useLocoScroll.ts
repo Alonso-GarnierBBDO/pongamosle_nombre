@@ -65,7 +65,7 @@ const useLocoScroll = () => {
 
                 if(rectScroll){
                     item.style.transition = '.6s ease';
-                    if(rectScroll.top <= (rectScroll.height / 1.2)){
+                    if(rectScroll.top <= (rectScroll.height + rectScroll.height)){
                         item.style.transform = 'scale(1)';
                     }else{
                         item.style.transform = 'scale(0.8)';
