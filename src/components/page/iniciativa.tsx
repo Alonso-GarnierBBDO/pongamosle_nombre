@@ -36,7 +36,7 @@ function IniciativaComponent(){
                 >
                     <section className='viewChat' ref={chat}>
                         <section className='message'>
-                            <h2>Es muy difícil reconocer la violencia, si no podemos vocalizar lo que vivimos.</h2>
+                            <h2>Es muy difícil reconocer la violencia, <br/> si no podemos vocalizar lo que vivimos.</h2>
                         </section>
                     </section>
                     <section className='content'>

@@ -11,7 +11,7 @@ function MotivcacionComponent(){
     const items = [
         {
             context: 'Si te niegan tu derecho a vivir libremente tu identidad de género.',
-            title: 'NO ES OPINIÓN, ES VIOLENCIA'
+            title: 'NO ES OPINIÓN, ES VIOLENCIA.'
         },
         {
             context: 'Si tu cuidador te hace sentir incómoda y te toca inadecuadamente.',
@@ -19,15 +19,15 @@ function MotivcacionComponent(){
         },
         {
             context: 'Cuando te niegan una educación sexual integral.',
-            title: 'NO ES PRUDENCIA, ES VIOLENCIA'
+            title: 'NO ES PRUDENCIA, ES VIOLENCIA.'
         },
         {
             context: 'Si te exigen una prueba de un embarazo en un trabajo.',
-            title: 'NO ES REQUISITO, ES VIOLENCIA'
+            title: 'NO ES REQUISITO, ES VIOLENCIA.'
         },
         {
             context: 'Cuando te niegan atención médica digna.',
-            title: 'NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA'
+            title: 'NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA.'
         },
         {
             context: 'Si te obliga a tener relaciones sexuales aunque tú no quieras.',
@@ -35,7 +35,7 @@ function MotivcacionComponent(){
         },
         {
             context: 'Cuando te cela y se pone agresivo contigo.',
-            title: 'NO ES AMOR, ES VIOLENCIA'
+            title: 'NO ES AMOR, ES VIOLENCIA.'
         }
     ]
 
@@ -70,7 +70,7 @@ function MotivcacionComponent(){
                 <section className='escritorio'>
                     <div className="item white">
                         <span>Si te niegan tu derecho a vivir libremente tu identidad de género.</span>
-                        <strong>NO ES OPINIÓN, <br/> ES VIOLENCIA</strong>
+                        <strong>NO ES OPINIÓN, <br/> ES VIOLENCIA.</strong>
                     </div>
                     <div className="item white">
                         <span>Si tu cuidador te hace sentir incómoda y te toca inadecuadamente.</span>
@@ -78,15 +78,15 @@ function MotivcacionComponent(){
                     </div>
                     <div className="item dark">
                         <span>Cuando te niegan una educación sexual integral.</span>
-                        <strong>NO ES PRUDENCIA, <br/> ES VIOLENCIA</strong>
+                        <strong>NO ES PRUDENCIA, <br/> ES VIOLENCIA.</strong>
                     </div>
                     <div className="item dark">
                         <span>Cuando te niegan atención médica digna.</span>
-                        <strong>NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA</strong>
+                        <strong>NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA.</strong>
                     </div>
                     <div className="item dark">
                         <span>Si te exigen una prueba de un embarazo en un trabajo.</span>
-                        <strong>NO ES REQUISITO, <br/> ES VIOLENCIA</strong>
+                        <strong>NO ES REQUISITO, <br/> ES VIOLENCIA.</strong>
                     </div>
                     <div className="item white">
                         <span>Si te obliga a tener relaciones sexuales aunque tú no quieras.</span>
@@ -94,7 +94,7 @@ function MotivcacionComponent(){
                     </div>
                     <div className="item white">
                         <span>Cuando te cela y se pone agresivo contigo.</span>
-                        <strong>NO ES AMOR, <br/> ES VIOLENCIA</strong>
+                        <strong>NO ES AMOR, <br/> ES VIOLENCIA.</strong>
                     </div>
             </section>
                 <motion.section 
