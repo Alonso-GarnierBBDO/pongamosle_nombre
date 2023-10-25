@@ -84,6 +84,7 @@
 
 
         @include bp(laptop){
+            display: grid;
             grid-template-columns: repeat(5, 20%);
             background-color: transparent;
             grid-gap: 0px;
