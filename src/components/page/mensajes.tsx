@@ -21,12 +21,12 @@ const MensajesComponents =  () => {
             textColor: '#B8364B'
         },
         {
-            content:  "“Son solo cariños”",
+            content:  "“Son sólo cariños”",
             color: '#D93F3F',
             textColor: '#FFCFC2'
         },
         {
-            content:  "“Solo era un halago”",
+            content:  "“Sólo era un halago”",
             color: '#FFB8B8',
             textColor: '#B8364B'
         },

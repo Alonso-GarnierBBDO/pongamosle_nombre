@@ -140,7 +140,7 @@ function Header() {
             </header>
 
             <div className="modal_contact">
-                <a href="">
+                <a href={'tel:1572'}>
                     <Image src={ImagePhone.src} alt="Telefono imagen" width={100} height={100}/>
                     <p>Haz tus denuncias al 1572</p>
                 </a>

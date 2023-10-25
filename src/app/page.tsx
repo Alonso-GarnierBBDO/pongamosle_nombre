@@ -141,7 +141,7 @@ export default function Home() {
                 {
                   proposito.length > 0 &&
                   <div>
-                    <h4>¿cúal es su propósito?</h4>
+                    <h4>¿cuál es su propósito?</h4>
                     <p>{ proposito }</p>
                   </div>
                 }

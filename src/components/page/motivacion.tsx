@@ -14,8 +14,8 @@ function MotivcacionComponent(){
             title: 'NO ES OPINIÓN, ES VIOLENCIA'
         },
         {
-            context: 'Cuando te niegan una educación sexual integral.',
-            title: 'NO ES PRUDENCIA, ES VIOLENCISIA'
+            context: 'Si tu cuidador te hace sentir incómoda y te toca inadecuadamente.',
+            title: 'NO ES CUIDADO, ES ABUSO SEXUAL.'
         },
         {
             context: 'Cuando te niegan una educación sexual integral.',
@@ -27,11 +27,11 @@ function MotivcacionComponent(){
         },
         {
             context: 'Cuando te niegan atención médica digna.',
-            title: 'NO ES EL ‘SISTEMA’ ES VIOLENCIA'
+            title: 'NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA'
         },
         {
-            context: 'Si te obliga a tener relaciones sexuales aunque tu no quieras.',
-            title: 'NO ES EL ‘SISTEMA’ ES VIOLENCIA'
+            context: 'Si te obliga a tener relaciones sexuales aunque tú no quieras.',
+            title: 'NO ES &apos;PROBAR TU AMOR&apos;, ES ABUSO SEXUAL.'
         },
         {
             context: 'Cuando te cela y se pone agresivo contigo.',
@@ -73,8 +73,8 @@ function MotivcacionComponent(){
                         <strong>NO ES OPINIÓN, <br/> ES VIOLENCIA</strong>
                     </div>
                     <div className="item white">
-                        <span>Cuando te niegan una educación sexual integral.</span>
-                        <strong>NO ES PRUDENCIA, <br/> ES VIOLENCISIA</strong>
+                        <span>Si tu cuidador te hace sentir incómoda y te toca inadecuadamente.</span>
+                        <strong>NO ES CUIDADO, <br/> ES ABUSO SEXUAL.</strong>
                     </div>
                     <div className="item dark">
                         <span>Cuando te niegan una educación sexual integral.</span>
@@ -82,15 +82,15 @@ function MotivcacionComponent(){
                     </div>
                     <div className="item dark">
                         <span>Cuando te niegan atención médica digna.</span>
-                        <strong>NO ES EL ‘SISTEMA’ ES VIOLENCIA</strong>
+                        <strong>NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA</strong>
                     </div>
                     <div className="item dark">
                         <span>Si te exigen una prueba de un embarazo en un trabajo.</span>
                         <strong>NO ES REQUISITO, <br/> ES VIOLENCIA</strong>
                     </div>
                     <div className="item white">
-                        <span>Si te obliga a tener relaciones sexuales aunque tu no quieras.</span>
-                        <strong>NO ES EL ‘SISTEMA’ ES VIOLENCIA</strong>
+                        <span>Si te obliga a tener relaciones sexuales aunque tú no quieras.</span>
+                        <strong>NO ES &apos;PROBAR TU AMOR&apos;, ES ABUSO SEXUAL.</strong>
                     </div>
                     <div className="item white">
                         <span>Cuando te cela y se pone agresivo contigo.</span>
@@ -119,8 +119,8 @@ function MotivcacionComponent(){
                                 return (
                                     <SwiperSlide className='slider-item' key={key}>
                                         <section>
-                                            <span>{ e.context }</span>
-                                            <strong>{ e.title }</strong>
+                                            <span dangerouslySetInnerHTML={{__html: e.context}}></span>
+                                            <strong dangerouslySetInnerHTML={{__html: e.title}}></strong>
                                         </section>
                                     </SwiperSlide>
                                 );

@@ -13,7 +13,7 @@ function FooterComponent(){
                 <Image src={Logo.src} width={200} height={100} alt='Logo del pongamosle nombre' priority />    
                 <section>
                     <span>{ year }</span>
-                    <p>Campaña creada en conjunto con <br/> <a href="https://garnierbbdo.com/" target='_black'>Garnier BBDO</a> y la Coalición XX</p>
+                    <p>Campaña donada y creada en conjunto con la <br/> Alianza para la Educación Inclusiva y  <a href="https://garnierbbdo.com/" target='_black'>Garnier BBDO</a>.</p>
                 </section>
             </footer>
         </>

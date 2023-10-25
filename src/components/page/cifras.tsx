@@ -49,7 +49,7 @@ function CifrasComponent(){
                         })
                     }
                 </motion.section>
-                <h2 className='title'>CIFRAS ACTUALES</h2>    
+                {/* <h2 className='title'>CIFRAS ACTUALES</h2>    
                 <motion.section 
                     className="cifras-actuales"
                     initial={{ y: 100, opacity: 0 }}
@@ -83,7 +83,7 @@ function CifrasComponent(){
                         <span>45%</span>
                         <p>De las mujeres guatemaltecas no conocen sus derechos</p>
                     </motion.section>
-                </motion.section>
+                </motion.section> */}
             </section>
         </>
     )

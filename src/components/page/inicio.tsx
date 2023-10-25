@@ -51,8 +51,6 @@ function InicioComponent(){
         }
 
 
-        console.log(numeroFinal);
-
     }, []);
 
 

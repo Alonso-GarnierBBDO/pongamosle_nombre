@@ -1,6 +1,7 @@
+'use client';
+
 import ImageTest from "@/assets/img/home/person_logo.svg";
 import Image from "next/image";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { useState, useEffect } from "react";
@@ -9,17 +10,23 @@ import { motion } from "framer-motion";
 // Share bottons
 import {
   FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
 } from "next-share";
 
 // Groups
-import SharedImage from "@/assets/img/home/share/shared.svg";
 import FacebookImage from "@/assets/img/home/share/facebook.svg";
-import InImage from "@/assets/img/home/share/in.svg";
-import TwitterImage from "@/assets/img/home/share/twitter.svg";
 import URLImage from "@/assets/img/home/share/url.svg";
 import Megafono from "@/assets/img/home/megafono.svg";
+import DescargarImage from '@/assets/img/home/share/downloand.svg';
+
+// All Image
+import ImageOne from '@/assets/img/home/compartir/01.png';
+import ImageTwo from '@/assets/img/home/compartir/02.png';
+import ImageTres from '@/assets/img/home/compartir/03.png'
+import ImageCuatro from '@/assets/img/home/compartir/04.png';
+import ImageCinco from '@/assets/img/home/compartir/05.png';
+import ImageSeis from '@/assets/img/home/compartir/06.png';
+import ImageSiete from '@/assets/img/home/compartir/07.png';
+import ImageOcho from '@/assets/img/home/compartir/08.png';
 
 // Import Swiper styles
 import "swiper/css";
@@ -27,7 +34,7 @@ import "swiper/css";
 
 function UneteComponent() {
   const [viewModal, setViewModal] = useState(false);
-  const [copyLink, setCopyLink] = useState(false);
+  const [url, setUrl] = useState('');
 
   function modal(e: React.MouseEvent) {
     e.stopPropagation(); // Evita la propagación del evento
@@ -35,83 +42,74 @@ function UneteComponent() {
     viewModal ? setViewModal(false) : setViewModal(true);
   }
 
-  async function copyElement(url : string, event: React.MouseEvent) {
-
+  async function copyElement(url: string, event: React.MouseEvent) {
     const child = event.currentTarget;
 
     try {
-      if(child){
+      if (child) {
+        const image = child.querySelector("img");
+        const svg = child.querySelector("svg");
 
-        const image = child.querySelector('img');
-        const svg = child.querySelector('svg');
-
-        if(image && svg){
-            image.style.display = "none";
-            svg.style.display = "block";
-            await navigator.clipboard.writeText(url);
-            setTimeout(() => {
-                image.style.display = "block";
-                svg.style.display = "none";
-            }, 1500);            
+        if (image && svg) {
+          image.style.display = "none";
+          svg.style.display = "block";
+          await navigator.clipboard.writeText(url);
+          setTimeout(() => {
+            image.style.display = "block";
+            svg.style.display = "none";
+          }, 1500);
         }
-
       }
     } catch (err) {
       console.error("Failed to copy: ", err);
     }
   }
 
+  useEffect(()=>{
+    setUrl(window.location.origin)
+  }, [])
+
   const shared = [
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageOne.src,
+      title: "No es broma, es discriminación",
     },
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageTwo.src,
+      title: "No es falta de recursos, es indiferencia",
     },
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageTres.src,
+      title: "No es biología, es transfobia",
     },
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageCuatro.src,
+      title: "No es falta de recursos, es irresponsabilidad",
     },
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageCinco.src,
+      title: "No es ser diferentes, es descriminación",
     },
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageSeis.src,
+      title: "No es una frase chapina, es racismo",
     },
     {
-        img: ImageTest.src,
-        url: 'https://github.com/next-share',
-        title: 'next-share is a social share buttons for your next React apps.'
-        
+      img: ImageSiete.src,
+      title: "No es una forma de pago, es violencia migratoria",
     },
-  ]
+    {
+      img: ImageOcho.src,
+      title: "No es el 'SISTEMA', es violencia",
+    },
+  ];
 
-  useEffect(() => {}, []);
+
 
   return (
     <>
       <section className="uneteComponent" id="comparte">
-        <motion.section 
+        <motion.section
           className="header_unete"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -133,7 +131,7 @@ function UneteComponent() {
             </p>
           </section>
         </motion.section>
-        <motion.section 
+        <motion.section
           className="slider"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -162,77 +160,52 @@ function UneteComponent() {
             modules={[Pagination]}
             className="slideContent"
           >
-            {
-                shared.map((item, key) => {
-                    return (
-                        <SwiperSlide className="item" key={key}>
-                            <Image
-                                src={item.img}
-                                alt="Imagen de unete"
-                                title="Imagen de unete"
-                                width={300}
-                                height={300}
-                            />
-                            <div className="group">
-                                <LinkedinShareButton
-                                url={item.url}
-                                title={item.title}
-                                >
-                                <Image
-                                    src={InImage.src}
-                                    width={100}
-                                    height={100}
-                                    alt="Icono de Linkedin"
-                                />
-                                </LinkedinShareButton>
+            {shared.map((item, key) => {
+              return (
+                <SwiperSlide className="item" key={key}>
+                  <Image
+                    src={item.img}
+                    alt="Imagen de unete"
+                    title="Imagen de unete"
+                    width={300}
+                    height={300}
+                  />
+                  <div className="group">
+                    <FacebookShareButton
+                      url={`${url}${item.img}`}
+                      quote={item.title}
+                      title={item.title}
+                    >
+                      <Image
+                        src={FacebookImage.src}
+                        width={100}
+                        height={100}
+                        alt="Icono de facebook"
+                      />
+                    </FacebookShareButton>
+                    <a href={`${url}${item.img}`} download={item.title} target="_black">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        fill="currentColor"
+                        className="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                      </svg>
 
-                                <FacebookShareButton
-                                url={item.url}
-                                quote={item.title}
-                                title={item.title}
-                                >
-                                <Image
-                                    src={FacebookImage.src}
-                                    width={100}
-                                    height={100}
-                                    alt="Icono de facebook"
-                                />
-                                </FacebookShareButton>
-                                <TwitterShareButton
-                                    url={item.url}
-                                    title={item.title}
-                                >
-                                <Image
-                                    src={TwitterImage.src}
-                                    width={100}
-                                    height={100}
-                                    alt="Icono de X"
-                                />
-                                </TwitterShareButton>
-                                <button onClick={(event) => copyElement(item.url, event)} disabled={copyLink}>
-                                    <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="25"
-                                    height="25"
-                                    fill="currentColor"
-                                    className="bi bi-check2"
-                                    viewBox="0 0 16 16"
-                                    >
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-                                    </svg>
-
-                                    <Image
-                                    src={URLImage.src}
-                                    alt="Copiar"
-                                    width={100}
-                                    height={100}
-                                    />
-                                </button>
-                            </div>
-                            </SwiperSlide>
-                    )
-                })
-            }
+                      <Image
+                        src={DescargarImage.src}
+                        alt="Copiar"
+                        width={100}
+                        height={100}
+                      />
+                    </a>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </motion.section>
       </section>
