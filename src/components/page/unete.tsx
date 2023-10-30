@@ -27,6 +27,7 @@ import ImageCinco from '@/assets/img/home/compartir/05.png';
 import ImageSeis from '@/assets/img/home/compartir/06.png';
 import ImageSiete from '@/assets/img/home/compartir/07.png';
 import ImageOcho from '@/assets/img/home/compartir/08.png';
+import ImageNueve from '@/assets/img/home/compartir/09.png';
 
 // Import Swiper styles
 import "swiper/css";
@@ -75,7 +76,7 @@ function UneteComponent() {
       title: "No es broma, es discriminación",
     },
     {
-      img: ImageTwo.src,
+      img: ImageNueve.src,
       title: "No es falta de recursos, es indiferencia",
     },
     {

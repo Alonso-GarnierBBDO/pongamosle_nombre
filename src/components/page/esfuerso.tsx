@@ -14,6 +14,7 @@ import LosEmulrasImage from '@/assets/img/home/unete/09.webp';
 import CapacidadImage from '@/assets/img/home/unete/10.webp';
 import MujeresImage from '@/assets/img/home/unete/11.webp';
 import IDEIImage from '@/assets/img/home/unete/12.webp';
+import UneteInciativaImage from '@/assets/img/home/unete/una_iniciativa.webp';
 
 
 
@@ -31,6 +32,13 @@ interface ChildComponentProps {
 function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
 
     const image = [
+        {
+            img: UneteInciativaImage.src,
+            quienes: '',
+            proposito: '',
+            campana: '',
+            link: '',
+        },
         {
             img: MovimientoImage.src,
             quienes: 'Espacio de diálogo de personas plurales y diversas.',
@@ -98,7 +106,7 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
             img: CapacidadImage.src,
             quienes: 'Colectiva de mujeres con discapacidad en el área rural.',
             proposito: 'Promover espacios de apoyo colectivo.',
-            campana: '',
+            campana: 'Visibilizar lo que hace falta para que el mundo sea más accesible.',
             link: 'http://www.mujeresconcapacidad.wordpress.com',
         },
         {

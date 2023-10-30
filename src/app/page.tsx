@@ -41,6 +41,9 @@ export default function Home() {
   const [link, setLink] = useState("");
 
   const handleChildEvent = (eventData: modalContent) => {
+
+    if(!eventData.quienes && !eventData.proposito) return;
+
     setActiveModal(eventData.active);
     setImage(eventData.image);
     setQuienes(eventData.quienes);
