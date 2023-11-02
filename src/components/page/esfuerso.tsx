@@ -34,9 +34,9 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
     const image = [
         {
             img: UneteInciativaImage.src,
-            quienes: '',
-            proposito: '',
-            campana: '',
+            quienes: 'Nosotras Lideramos es un programa nuevo, inspirador, innovador y de gran alcance que tiene como objetivo mejorar la salud, derechos sexuales y reproductivos de mujeres jóvenes, enfocado en cuatro grupos específicos: las que viven con VIH, las que tienen discapacidades, las que pertenecen a la comunidad LGTBIQ+ y las que se ven afectadas por desplazamientos.',
+            proposito: 'We Lead crea condiciones para que las mujeres tomen el control de sus vidas y sus decisiones, se conecten y reúnan entre ellas en Comunidades de Acción (CoA) a nivel nacional.',
+            campana: 'Empoderándolas para que participen en movimientos, desarrollen y lideren campañas para cambiar las percepciones de las personas responsables de formular políticas y del público general sobre la salud y los derechos sexuales y reproductivos de las personas titulares de derechos.',
             link: '',
         },
         {
