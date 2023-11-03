@@ -4,10 +4,23 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 const useLocoScroll = () => {
 
+    window.onresize = () => {
+        scrollEjecutar();
+    }
+
+    scrollEjecutar();
+
+
+}
+
+
+function scrollEjecutar(){
     gsap.registerPlugin(ScrollTrigger);
 
     const element : NodeListOf<HTMLElement> | null = document.querySelectorAll('.scale_big');
     
+    console.log("Se actualizo el elemento")
+
     if(element){
         element.forEach( ( item) => {
 
@@ -16,10 +29,11 @@ const useLocoScroll = () => {
                     scrollTrigger: {
                         trigger: item,
                         markers: false,
-                        start: "top top",
-                        end: "+=350",
+                        start: "top 80%",
+                        // end: "+=450",
                         scrub: true,
                       },
+                      pin: true,
                       ease: "none",
                       scale: 1,
                 });
@@ -62,7 +76,6 @@ const useLocoScroll = () => {
         }
 
     }
-
 }
 
 
