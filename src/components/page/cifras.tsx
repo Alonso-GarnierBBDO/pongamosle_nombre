@@ -62,7 +62,7 @@ function CifrasComponent(){
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ type: "spring" }} 
                     >
-                        <span>14</span>
+                        <span>86000</span>
                         <p>Denuncias diarias de violencia sexual</p>
                     </motion.section>
                     <motion.section 
@@ -71,7 +71,7 @@ function CifrasComponent(){
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ type: "spring" }} 
                     >
-                        <span>23</span>
+                        <span>16000</span>
                         <p>Niñas y adolescentes son abusadas sexualmente todos los días</p>
                     </motion.section>
                     <motion.section 

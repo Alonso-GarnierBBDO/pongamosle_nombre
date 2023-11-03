@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import InicioComponent from "@/components/page/inicio";
 import MensajesComponents from "@/components/page/mensajes";
 import ViolenciaComponent from "@/components/page/violencia";
@@ -31,7 +30,6 @@ type modalContent = {
 };
 
 export default function Home() {
-  useLocoScrollFunction();
 
   const [activeModal, setActiveModal] = useState(false);
   const [image, setImage] = useState("");
@@ -39,6 +37,12 @@ export default function Home() {
   const [proposito, setProposito] = useState("");
   const [campana, setCampana] = useState("");
   const [link, setLink] = useState("");
+
+
+  useEffect(() => {
+    // Utiliza locoScrollFunction en el efecto
+    locoScrollFunction();
+  }, []);
 
   const handleChildEvent = (eventData: modalContent) => {
 
