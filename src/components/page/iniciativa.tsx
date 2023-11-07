@@ -41,7 +41,7 @@ function IniciativaComponent(){
                     </section>
                     <section className='content'>
                         <h2>PONGÁMOSLE NOMBRE</h2>
-                        <p>es una iniciativa creada con el propósito de educar sobre los derechos sexuales y reproductivos de mujeres, migrantes, personas de la comunidad LGBTIQ+ y personas con discapacidad en Guatemala, con el fin de concientizar, abordar y combatir los diversos tipos de violencia que enfrentan a diario. </p>
+                        <p>es una iniciativa creada con el propósito de educar sobre los derechos sexuales y reproductivos de mujeres, migrantes, personas de la comunidad LBTI y personas con discapacidad en Guatemala, con el fin de concientizar, abordar y combatir los diversos tipos de violencia que enfrentan a diario. </p>
                     </section>
                 </motion.section>
             </section>

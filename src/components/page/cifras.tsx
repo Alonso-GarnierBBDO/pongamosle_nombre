@@ -49,7 +49,7 @@ function CifrasComponent(){
                         })
                     }
                 </motion.section>
-                {/* <h2 className='title'>CIFRAS ACTUALES</h2>    
+                <h2 className='title'>CIFRAS ACTUALES</h2>    
                 <motion.section 
                     className="cifras-actuales"
                     initial={{ y: 100, opacity: 0 }}
@@ -62,8 +62,8 @@ function CifrasComponent(){
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ type: "spring" }} 
                     >
-                        <span>86000</span>
-                        <p>Denuncias diarias de violencia sexual</p>
+                        <span>86mil</span>
+                        <p>Denuncias por violencia sexual</p>
                     </motion.section>
                     <motion.section 
                         className='item'
@@ -71,8 +71,8 @@ function CifrasComponent(){
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ type: "spring" }} 
                     >
-                        <span>16000</span>
-                        <p>Niñas y adolescentes son abusadas sexualmente todos los días</p>
+                        <span>85%</span>
+                        <p>De las víctimas son mujeres</p>
                     </motion.section>
                     <motion.section 
                         className='item'
@@ -80,10 +80,51 @@ function CifrasComponent(){
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ type: "spring" }} 
                     >
-                        <span>45%</span>
-                        <p>De las mujeres guatemaltecas no conocen sus derechos</p>
+                        <span>50%</span>
+                        <p>Son mujeres jóvenes entre 13 y 30 años</p>
                     </motion.section>
-                </motion.section> */}
+                    <section className='content_items'>
+                        <motion.section 
+                            className='item'
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring" }} 
+                        >
+                            <span>Más de 16 mil</span>
+                            <p>Violaciones de niñas y adolescentes</p>
+                        </motion.section>
+                        <motion.section 
+                            className='item'
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring" }} 
+                        >
+                            <span>15 mil</span>
+                            <p>Embarazos</p>
+                        </motion.section>
+                        <motion.section 
+                            className='item'
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring" }} 
+                        >
+                            <span>5 mil</span>
+                            <p>Partos de niñas y adolescentes</p>
+                        </motion.section>
+                        <motion.section 
+                            className='item'
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ type: "spring" }} 
+                        >
+                            <span>67 de 76</span>
+                            <p>Casos de discriminación contra personas LBTI han sido desestimados</p>
+                        </motion.section>
+                    </section>
+                </motion.section>
+                <section className='fuente'>
+                    Fuente: <a href="https://www.vivirsinviolencia.org" target='_black'>vivirsinviolencia.org</a>
+                </section>
             </section>
         </>
     )

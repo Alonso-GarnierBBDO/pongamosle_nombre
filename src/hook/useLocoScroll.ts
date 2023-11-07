@@ -18,8 +18,6 @@ function scrollEjecutar(){
     gsap.registerPlugin(ScrollTrigger);
 
     const element : NodeListOf<HTMLElement> | null = document.querySelectorAll('.scale_big');
-    
-    console.log("Se actualizo el elemento")
 
     if(element){
         element.forEach( ( item) => {

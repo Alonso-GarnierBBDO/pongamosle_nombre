@@ -33,13 +33,6 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
 
     const image = [
         {
-            img: UneteInciativaImage.src,
-            quienes: 'Nosotras Lideramos es un programa nuevo, inspirador, innovador y de gran alcance que tiene como objetivo mejorar la salud, derechos sexuales y reproductivos de mujeres jóvenes, enfocado en cuatro grupos específicos: las que viven con VIH, las que tienen discapacidades, las que pertenecen a la comunidad LGTBIQ+ y las que se ven afectadas por desplazamientos.',
-            proposito: 'We Lead crea condiciones para que las mujeres tomen el control de sus vidas y sus decisiones, se conecten y reúnan entre ellas en Comunidades de Acción (CoA) a nivel nacional.',
-            campana: 'Empoderándolas para que participen en movimientos, desarrollen y lideren campañas para cambiar las percepciones de las personas responsables de formular políticas y del público general sobre la salud y los derechos sexuales y reproductivos de las personas titulares de derechos.',
-            link: '',
-        },
-        {
             img: MovimientoImage.src,
             quienes: 'Espacio de diálogo de personas plurales y diversas.',
             proposito: 'Fortalecer activismos de las mujeres.',
@@ -125,6 +118,14 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
         },
     ]
 
+    const inicitiva = {
+        img: UneteInciativaImage.src,
+        quienes: 'Nosotras Lideramos es un programa nuevo, inspirador, innovador y de gran alcance que tiene como objetivo mejorar la salud, derechos sexuales y reproductivos de mujeres jóvenes, enfocado en cuatro grupos específicos: las que viven con VIH, las que tienen discapacidades, las que pertenecen a la comunidad LGTBIQ+ y las que se ven afectadas por desplazamientos.',
+        proposito: 'We Lead crea condiciones para que las mujeres tomen el control de sus vidas y sus decisiones, se conecten y reúnan entre ellas en Comunidades de Acción (CoA) a nivel nacional.',
+        campana: 'Empoderándolas para que participen en movimientos, desarrollen y lideren campañas para cambiar las percepciones de las personas responsables de formular políticas y del público general sobre la salud y los derechos sexuales y reproductivos de las personas titulares de derechos.',
+        link: '',
+    }
+
     const handleModal = (img : string, quienes : string, proposito : string, campana : string, link : string) => {
         onEvent({
             active: true,
@@ -143,6 +144,12 @@ function EsfuerzoProyecto({ onEvent } : ChildComponentProps ){
             >
                 <h2>este proyecto nace del esfuerzo y la unión de los siguientes colectivos:</h2>
                 <p>Conócelos más</p>
+                <section className='inicitiva'>
+                    <h4>Una iniciativa de: </h4>
+                    <section title='Abrir iniciativa de We Lead' className='image' onClick={() => handleModal(inicitiva.img, inicitiva.quienes, inicitiva.proposito, inicitiva.campana, inicitiva.link)}>
+                        <Image width={500} height={500} src={UneteInciativaImage.src} alt='Logo de una iniciativa de We Lead' />
+                    </section>
+                </section>
                 <section className='imagenes'>
                     {
                         image.map((item, key) => {

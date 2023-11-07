@@ -265,6 +265,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    pointer-events: none;
+    user-select: none;
 
     @include bp(laptop){
         bottom: 20px;       

@@ -35,6 +35,9 @@ footer{
         @include bp(tablet){
             align-items: flex-end;
             text-align: right;
+            flex-flow: row;
+            align-items: center;
+            column-gap: 20px;
         }
 
         span{
@@ -51,6 +54,32 @@ footer{
             }
 
         }
+
+        .red_social{
+
+            display: flex;
+            column-gap: 10px;
+            margin-top: 20px;
+
+            @include bp(tablet){
+                margin-top: 0px;
+            }
+
+            a{
+                width: 40px;
+                height: 40px;   
+                position: relative;
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                }
+
+            }
+
+        }
+
     }
 
 }
