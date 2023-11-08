@@ -273,6 +273,13 @@ header{
         pointer-events: none;
     }
 
+    section{
+
+        display: flex;
+        column-gap: 10px;
+
+    }
+
     a{
         width: 50px;
         height: 50px;
@@ -288,16 +295,38 @@ header{
         font-family: $font_principal;
         pointer-events: initial;
 
-        &:hover{
-            width: 265px;
-            justify-content: flex-start;
 
-            img{
-                margin-left: 5px;
+        @include bp(tablet){
+            &:hover{
+                width: 265px;
+                justify-content: flex-start;
+    
+                img{
+                    margin-left: 5px;
+                }
+    
+                p{
+                    display: block;
+                }
             }
 
-            p{
-                display: block;
+
+            &:nth-of-type(2){
+                &:hover{
+                    width: 200px;
+                }
+            }
+
+            &:nth-of-type(3){
+                &:hover{
+                    width: 200px;
+                }
+            }
+
+            &:nth-of-type(4){
+                &:hover{
+                    width: 240px;
+                }
             }
         }
 

@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { usePathname, useParams } from 'next/navigation';
 import ImagePhone from '@/assets/img/header/phone_modal.png';
 import ImageScroll from '@/assets/img/header/arrrow_scroll.png';
-
-
+import FacebookIcon from '@/assets/img/home/facebook.svg';
+import InstagramIcon from '@/assets/img/home/instagram.svg';
+import EmailIcon from '@/assets/img/home/email.svg';
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import Logo from '@/assets/img/header/logo.svg';
@@ -141,12 +142,23 @@ function Header() {
 
             <div className="modal_contact">
                 <section>
-                    
+                    <a href={'tel:1572'}>
+                        <Image src={ImagePhone.src} alt="Telefono imagen" width={100} height={100}/>
+                        <p>Haz tus denuncias al 1572</p>
+                    </a>
+                    <a href='https://www.facebook.com/profile.php?id=61551865634564' target='_black' title='Ir a Facebook'>
+                            <Image src={FacebookIcon.src} width={100} height={100} alt='Icono de facebook' />
+                            <p>Visitar facebook</p>
+                    </a>
+                    <a href='https://www.instagram.com/pongamoslenombre' target='_black' title='Ir a Instagram'>
+                        <Image src={InstagramIcon.src} width={100} height={100} alt='Icono de instagram' />
+                        <p>Visitar instagram</p>
+                    </a>
+                    <a href='mailto:pongámoslenombre@gmail.com' target='_black' title='Ir a Instagram'>
+                        <Image src={EmailIcon.src} width={100} height={100} alt='Icono de Email' />
+                        <p>Pornerse en contacto</p>
+                    </a>
                 </section>
-                <a href={'tel:1572'}>
-                    <Image src={ImagePhone.src} alt="Telefono imagen" width={100} height={100}/>
-                    <p>Haz tus denuncias al 1572</p>
-                </a>
                 <button className="newScroll" onClick={scrollear}>
                     <Image src={ImageScroll.src} alt="Imagen del arrow" width={100} height={100}/>
                 </button>
