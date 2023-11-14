@@ -43,7 +43,7 @@ function ComunidadComponent(){
                         initial={{ y: 100, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ type: "spring" }}
-                    >Estas frases a menudo se usan para ocultar y suavizar la violenta realidad que viven miles de mujeres y miembros de la comunidad LBTI en Guatemala.</motion.p>
+                    >Estas frases a menudo se usan para ocultar y suavizar la violenta realidad que viven miles de mujeres y personas de la comunidad LBTI en Guatemala.</motion.p>
                     <Image src={LebianaImage.src} alt='Imagen de lesbiana' width={400} height={400}/>
                 </section>
             </section>

@@ -126,7 +126,7 @@ function UneteComponent() {
           <section>
             <h2>Únete y comparte la campaña</h2>
             <p>
-              Ayudanos a difundir nuestro mensaje y así más personas entiendan
+              Ayúdanos a difundir nuestro mensaje y así más personas entiendan
               que, para ponerle fin a la violencia, el primer paso es llamar las
               cosas por su nombre.
             </p>

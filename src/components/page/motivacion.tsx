@@ -10,19 +10,19 @@ function MotivcacionComponent(){
 
     const items = [
         {
-            context: 'Si te niegan tu derecho a vivir libremente tu identidad de género.',
+            context: 'Si te niegan tu derecho a vivir libremente tu identidad de género',
             title: 'NO ES OPINIÓN, ES VIOLENCIA.'
         },
         {
-            context: 'Si tu cuidador te hace sentir incómoda y te toca inadecuadamente.',
+            context: 'Si tu cuidador te hace sentir incómoda y te toca inadecuadamente',
             title: 'NO ES CUIDADO, ES ABUSO SEXUAL.'
         },
         {
-            context: 'Cuando te niegan una educación sexual integral.',
+            context: 'Cuando te niegan una educación sexual integral',
             title: 'NO ES PRUDENCIA, ES VIOLENCIA.'
         },
         {
-            context: 'Si te exigen una prueba de un embarazo en un trabajo.',
+            context: 'Si te exigen una prueba de un embarazo en un trabajo',
             title: 'NO ES REQUISITO, ES VIOLENCIA.'
         },
         {
@@ -30,11 +30,11 @@ function MotivcacionComponent(){
             title: 'NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA.'
         },
         {
-            context: 'Si te obliga a tener relaciones sexuales aunque tú no quieras.',
+            context: 'Si te obliga a tener relaciones sexuales aunque tú no quieras',
             title: 'NO ES &apos;PROBAR TU AMOR&apos;, ES ABUSO SEXUAL.'
         },
         {
-            context: 'Cuando te cela y se pone agresivo contigo.',
+            context: 'Cuando te cela y se pone agresivo contigo',
             title: 'NO ES AMOR, ES VIOLENCIA.'
         }
     ]
@@ -69,31 +69,31 @@ function MotivcacionComponent(){
             <section className={'motivaciones scroll' + " " + (removeTwo ? 'remove' : '')} ref={elementTwo}>
                 <section className='escritorio'>
                     <div className="item white">
-                        <span>Si te niegan tu derecho a vivir libremente tu identidad de género.</span>
+                        <span>Si te niegan tu derecho a vivir libremente tu identidad de género</span>
                         <strong>NO ES OPINIÓN, <br/> ES VIOLENCIA.</strong>
                     </div>
                     <div className="item white">
-                        <span>Si tu cuidador te hace sentir incómoda y te toca inadecuadamente.</span>
+                        <span>Si tu cuidador te hace sentir incómoda y te toca inadecuadamente</span>
                         <strong>NO ES CUIDADO, <br/> ES ABUSO SEXUAL.</strong>
                     </div>
                     <div className="item dark">
-                        <span>Cuando te niegan una educación sexual integral.</span>
+                        <span>Cuando te niegan una educación sexual integral</span>
                         <strong>NO ES PRUDENCIA, <br/> ES VIOLENCIA.</strong>
                     </div>
                     <div className="item dark">
-                        <span>Cuando te niegan atención médica digna.</span>
+                        <span>Cuando te niegan atención médica digna</span>
                         <strong>NO ES EL &apos;SISTEMA&apos; ES VIOLENCIA.</strong>
                     </div>
                     <div className="item dark">
-                        <span>Si te exigen una prueba de un embarazo en un trabajo.</span>
+                        <span>Si te exigen una prueba de un embarazo en un trabajo</span>
                         <strong>NO ES REQUISITO, <br/> ES VIOLENCIA.</strong>
                     </div>
                     <div className="item white">
-                        <span>Si te obliga a tener relaciones sexuales aunque tú no quieras.</span>
+                        <span>Si te obliga a tener relaciones sexuales aunque tú no quieras</span>
                         <strong>NO ES &apos;PROBAR TU AMOR&apos;, ES ABUSO SEXUAL.</strong>
                     </div>
                     <div className="item white">
-                        <span>Cuando te cela y se pone agresivo contigo.</span>
+                        <span>Cuando te cela y se pone agresivo contigo</span>
                         <strong>NO ES AMOR, <br/> ES VIOLENCIA.</strong>
                     </div>
             </section>

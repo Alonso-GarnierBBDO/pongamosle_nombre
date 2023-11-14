@@ -5,43 +5,43 @@ const MensajesComponents =  () => {
 
     const menssages =  [
         {
-            content:  "“La educación sexual promueve la promiscuidad”",
+            content:  "“La educación sexual promueve la promiscuidad”.",
             color: '#FFB8B8',
             textColor: '#B8364B',
         },
         {
-            content:  "“Murió por crimen pasional”",
+            content:  "“Murió por crimen pasional”.",
             color: '#D93F3F',
             textColor: '#FFCFC2',
 
         },
         {
-            content:  "“Es mi opinión personal”",
+            content:  "“Es mi opinión personal”.",
             color: '#FFCFC2',
             textColor: '#B8364B'
         },
         {
-            content:  "“Son sólo cariños”",
+            content:  "“Son sólo cariños”.",
             color: '#D93F3F',
             textColor: '#FFCFC2'
         },
         {
-            content:  "“Sólo era un halago”",
+            content:  "“Sólo era un halago”.",
             color: '#FFB8B8',
             textColor: '#B8364B'
         },
         {
-            content:  "“Es una prueba de amor”",
+            content:  "“Es una prueba de amor”.",
             color: '#FFB8B8',
             textColor: '#B8364B'
         },
         {
-            content:  "“Eso va en contra de la naturaleza”",
+            content:  "“Eso va en contra de la naturaleza”.",
             color: '#D93F3F',
             textColor: '#FFCFC2'
         },
         {
-            content:  "“Tú te lo buscaste”",
+            content:  "“Tú te lo buscaste”.",
             color: '#FFCFC2',
             textColor: '#B8364B'
         }
