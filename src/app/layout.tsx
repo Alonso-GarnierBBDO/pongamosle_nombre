@@ -32,13 +32,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pongámosle nombre',
     description: 'Hay que ponerle nombre, rostro y alto a la violencia. Pongámosle nombre.',
-    images : {
-      url : 'https://pongamoslenombre.org/_next/static/media/logo.dd2e9539.svg',
-      width: 300,
-      height: 300,
-      alt: 'Logo de pongamosle nombre'
-    }
-  }
+    url: 'https://pongamoslenombre.org',
+    siteName: 'Pongámosle nombre',
+    type: 'website',
+    images: [
+      {
+          url : 'https://pongamoslenombre.org/favicon.ico',
+          width: 300,
+          height: 300,
+      }
+   ],
+  },
+  category: 'LBTI'
 }
 
 export default function RootLayout({
